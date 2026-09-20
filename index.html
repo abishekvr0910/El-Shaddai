@@ -1,0 +1,2618 @@
+﻿<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="El Shaddai Indian Cafe & Punkt Ksero in Katowice (ul. JagielloÅ„ska 22). Authentic South Indian Madras Filter Kaapi, warming regional chai, and student printing desk."/>
+  <meta name="theme-color" content="#1f120c"/>
+  <title>El Shaddai Indian Cafe &amp; Punkt Ksero | Katowice</title>
+  
+  <!-- Open Graph & Social Sharing -->
+  <meta property="og:title" content="El Shaddai Indian Cafe &amp; Punkt Ksero | Katowice"/>
+  <meta property="og:description" content="Authentic South Indian Madras Filter Kaapi, slow-brewed spiced chai, and student printing hub on ul. JagielloÅ„ska 22, Katowice."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="./assets/coffee-spices.webp"/>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"/>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+
+  <!-- JSON-LD LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "El Shaddai Indian Cafe & Punkt Ksero",
+    "image": "./assets/coffee-spices.webp",
+    "telephone": "+48507700193",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. JagielloÅ„ska 22",
+      "addressLocality": "Katowice",
+      "postalCode": "40-035",
+      "addressCountry": "PL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.2543453,
+      "longitude": 19.0225130
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:30",
+        "closes": "19:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ],
+    "department": {
+      "@type": "LocalBusiness",
+      "name": "El Shaddai Punkt Ksero & Print Desk",
+      "telephone": "+48516699313",
+      "email": "elshaddaipunks@gmail.com"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --coffee-bg: #1f120c;
+      --coffee-surface: #23140e;
+      --coffee-surface-elevated: #2a1811;
+      --coffee-card: #362017;
+      --coffee-card-hover: #42271c;
+      --accent-crema: #d9863d;
+      --accent-crema-hover: #e69a53;
+      --accent-crema-glow: rgba(217, 134, 61, 0.24);
+      --border-coffee: rgba(217, 134, 61, 0.18);
+      --border-coffee-light: rgba(217, 134, 61, 0.35);
+      --text-froth: #f5ede3;
+      --text-cream: #e6d7bd;
+      --text-muted: #c2ad9a;
+      --glass-dock-bg: rgba(31, 18, 12, 0.92);
+      --glass-dock-border: rgba(217, 134, 61, 0.35);
+      --glass-dock-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.8), 0 0 24px -4px rgba(217, 134, 61, 0.2);
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-elastic: cubic-bezier(0.34, 1.3, 0.64, 1);
+      --duration-reveal: 650ms;
+    }
+
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; background-color: #1f120c; color: #f5ede3; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #170c07; }
+    ::-webkit-scrollbar-thumb { background: #5a3a29; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #d9863d; }
+    ::selection { background: #d9863d; color: #170c07; }
+    dialog::backdrop { background: rgba(10, 5, 2, 0.85); backdrop-filter: blur(4px); }
+    button:focus-visible, a:focus-visible { outline: 2px solid #d9863d; outline-offset: 3px; }
+
+    /* ==========================================================================
+       SCROLL REVEAL ENGINE
+       ========================================================================== */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity var(--duration-reveal) var(--ease-spring),
+                  transform var(--duration-reveal) var(--ease-spring);
+      will-change: opacity, transform;
+    }
+
+    [data-reveal="fade-up"] {
+      transform: translateY(32px);
+    }
+
+    [data-reveal="scale-up"] {
+      transform: scale(0.96) translateY(20px);
+    }
+
+    [data-reveal].is-revealed {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    [data-reveal].is-revealed.reveal-settled {
+      will-change: auto;
+    }
+
+    [data-reveal-group="stagger"] [data-reveal-item] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms var(--ease-spring),
+                  transform 600ms var(--ease-spring);
+      transition-delay: calc(var(--reveal-index, 0) * 100ms);
+    }
+
+    [data-reveal-group="stagger"].is-revealed [data-reveal-item],
+    [data-reveal-item].is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       THE BARISTA PILL (Floating Glass Capsule Dock)
+       ========================================================================== */
+    .barista-dock {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(160%) scale(0.92);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px 8px 16px;
+      background: var(--glass-dock-bg);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 1px solid var(--glass-dock-border);
+      border-radius: 9999px;
+      box-shadow: var(--glass-dock-shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.55s var(--ease-elastic), opacity 0.4s ease;
+      max-width: calc(100vw - 28px);
+      user-select: none;
+    }
+
+    .barista-dock.is-dock-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    @media (max-width: 640px) {
+      .barista-dock {
+        bottom: 14px;
+        padding: 6px 10px;
+        gap: 6px;
+      }
+    }
+
+    .dock-pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent-crema);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .dock-pulse-dot::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent-crema);
+      animation: pulseCrema 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulseCrema {
+      0% { transform: scale(0.85); opacity: 0.9; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.85); opacity: 0; }
+    }
+
+    .dock-divider {
+      width: 1px;
+      height: 22px;
+      background: rgba(217, 134, 61, 0.25);
+      flex-shrink: 0;
+    }
+
+    .dock-mini-trigger {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 998;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--glass-dock-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-dock-border);
+      border-radius: 9999px;
+      color: var(--text-froth);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--glass-dock-shadow);
+      transition: transform 0.25s var(--ease-spring);
+    }
+
+    .dock-mini-trigger[hidden] {
+      display: none !important;
+    }
+
+    .dock-mini-trigger:hover {
+      transform: scale(1.05);
+      border-color: var(--accent-crema);
+    }
+
+    /* ==========================================================================
+       LANGUAGE SWITCH (EN/PL)
+       ========================================================================== */
+    .lang-toggle-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      background: #170c07;
+      border: 1px solid var(--border-coffee);
+      border-radius: 9999px;
+      padding: 2px;
+      isolation: isolate;
+    }
+
+    .lang-slider-pill {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: calc(100% - 4px);
+      width: calc(50% - 2px);
+      background: var(--accent-crema);
+      border-radius: 9999px;
+      z-index: 0;
+      transition: transform 0.28s var(--ease-spring);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .lang-toggle-wrap[data-active="pl"] .lang-slider-pill {
+      transform: translateX(100%);
+    }
+
+    .lang-btn {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+      min-width: 34px;
+      text-align: center;
+    }
+
+    .lang-btn.is-active {
+      color: #170c07;
+    }
+
+    .lang-translatable {
+      transition: opacity 120ms ease, transform 120ms ease;
+    }
+
+    .lang-translatable.is-lang-fading {
+      opacity: 0.35;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       DRINK CARD HOVER STATES & PHOTO ZOOM (Micro-interactions)
+       ========================================================================== */
+    .drink-card {
+      position: relative;
+      background: var(--coffee-card);
+      border: 1px solid var(--border-coffee);
+      border-radius: 1rem;
+      transition: transform 0.35s var(--ease-spring),
+                  box-shadow 0.35s var(--ease-spring),
+                  border-color 0.35s ease,
+                  background-color 0.35s ease;
+      will-change: transform, box-shadow;
+      isolation: isolate;
+    }
+
+    .drink-card:hover {
+      transform: scale(1.02);
+      border-color: rgba(217, 134, 61, 0.55);
+      background-color: #3d2317;
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.65),
+                  0 0 24px 0 rgba(217, 134, 61, 0.28),
+                  0 0 0 1px rgba(217, 134, 61, 0.35);
+      z-index: 10;
+    }
+
+    .card-media-wrap {
+      overflow: hidden;
+      border-radius: 0.75rem;
+      background-color: #23140e;
+    }
+
+    .card-media-img {
+      transition: transform 0.65s var(--ease-spring);
+      will-change: transform;
+    }
+
+    .drink-card:hover .card-media-img {
+      transform: scale(1.08);
+    }
+
+    /* Link Micro-interaction (Arrow Translation) */
+    .arrow-move {
+      display: inline-block;
+      transition: transform 0.25s var(--ease-spring), color 0.25s ease;
+      will-change: transform;
+    }
+
+    .drink-card:hover .arrow-move,
+    .drink-order-link:hover .arrow-move {
+      transform: translateX(4px);
+      color: var(--accent-crema-hover);
+    }
+
+    /* ==========================================================================
+       CATEGORY FILTER SLIDING HIGHLIGHT
+       ========================================================================== */
+    .menu-filters-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      background: #170c07;
+      border: 1px solid var(--border-coffee);
+      border-radius: 0.75rem;
+      padding: 3px;
+      isolation: isolate;
+    }
+
+    .filter-slider-pill {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      height: calc(100% - 6px);
+      width: 0;
+      background: var(--accent-crema);
+      border-radius: 0.55rem;
+      z-index: 1;
+      transition: transform 0.32s var(--ease-spring),
+                  width 0.32s var(--ease-spring);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 12px rgba(217, 134, 61, 0.28);
+      pointer-events: none;
+    }
+
+    .menu-filter-btn {
+      position: relative;
+      z-index: 2;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 6px 14px;
+      border-radius: 0.55rem;
+      font-size: 12px;
+      transition: color 0.22s ease;
+      white-space: nowrap;
+    }
+
+    .menu-filter-btn:hover {
+      color: var(--text-froth);
+    }
+
+    .menu-filter-btn.is-active {
+      color: #170c07 !important;
+      font-weight: 800 !important;
+    }
+
+    /* ==========================================================================
+       AMBIENT STEAM ANIMATION (Slow looping steam from teapot)
+       ========================================================================== */
+    .steam-container {
+      overflow: visible;
+    }
+
+    .steam-line {
+      transform-origin: bottom center;
+      will-change: transform, opacity;
+    }
+
+    @keyframes riseSteam1 {
+      0% {
+        transform: translateY(2px) scaleY(0.4) scaleX(0.8);
+        opacity: 0;
+      }
+      25% {
+        opacity: 0.8;
+      }
+      60% {
+        opacity: 0.5;
+        transform: translateY(-8px) scaleY(1.1) scaleX(1.1) skewX(2deg);
+      }
+      100% {
+        transform: translateY(-16px) scaleY(1.4) scaleX(1.3) skewX(5deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes riseSteam2 {
+      0% {
+        transform: translateY(2px) scaleY(0.3) scaleX(0.7);
+        opacity: 0;
+      }
+      35% {
+        opacity: 0.9;
+      }
+      70% {
+        opacity: 0.45;
+        transform: translateY(-10px) scaleY(1.15) scaleX(1.2) skewX(-3deg);
+      }
+      100% {
+        transform: translateY(-18px) scaleY(1.5) scaleX(1.4) skewX(-6deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes riseSteam3 {
+      0% {
+        transform: translateY(2px) scaleY(0.5) scaleX(0.8);
+        opacity: 0;
+      }
+      30% {
+        opacity: 0.75;
+      }
+      65% {
+        opacity: 0.4;
+        transform: translateY(-9px) scaleY(1.1) scaleX(1.15) skewX(3deg);
+      }
+      100% {
+        transform: translateY(-15px) scaleY(1.35) scaleX(1.3) skewX(4deg);
+        opacity: 0;
+      }
+    }
+
+    .steam-1 {
+      animation: riseSteam1 3.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .steam-2 {
+      animation: riseSteam2 4.2s cubic-bezier(0.4, 0, 0.6, 1) infinite 1.1s;
+    }
+
+    .steam-3 {
+      animation: riseSteam3 3.8s cubic-bezier(0.4, 0, 0.6, 1) infinite 2s;
+    }
+
+    /* ==========================================================================
+       CINEMATIC HERO & SPATIAL TYPOGRAPHY
+       ========================================================================== */
+    .volumetric-mesh {
+      background: radial-gradient(circle at 50% 30%, rgba(217, 134, 61, 0.28), transparent 65%),
+                  radial-gradient(circle at 20% 70%, rgba(84, 40, 22, 0.45), transparent 60%),
+                  radial-gradient(circle at 80% 80%, rgba(54, 32, 23, 0.55), transparent 60%),
+                  linear-gradient(180deg, #180d08 0%, #1f120c 50%, #170c07 100%);
+      background-size: 180% 180%;
+      animation: volumetricMeshShift 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes volumetricMeshShift {
+      0% { background-position: 0% 20%; }
+      50% { background-position: 100% 80%; }
+      100% { background-position: 0% 20%; }
+    }
+
+    .spatial-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.75rem, 7.5vw, 5.8rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.04;
+      background: linear-gradient(135deg, #ffffff 0%, #fcf7f2 30%, #e6a263 65%, #f5ede3 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 9s ease-in-out infinite alternate;
+    }
+
+    @keyframes textShimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .magnetic-btn {
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+      will-change: transform;
+    }
+
+    .fluid-underline {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: #e6d7bd;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .fluid-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #d9863d;
+      border-radius: 2px;
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fluid-underline:hover {
+      color: #ffffff;
+    }
+
+    .fluid-underline:hover::after {
+      width: 100%;
+    }
+
+    .hotspot-item {
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hotspot-item.is-active,
+    .hotspot-item:hover {
+      background: rgba(217, 134, 61, 0.16);
+      border-color: rgba(217, 134, 61, 0.55);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 16px -2px rgba(217, 134, 61, 0.25);
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      [data-reveal], [data-reveal-item] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .barista-dock {
+        transform: translateX(-50%) translateY(0) scale(1) !important;
+        transition: none !important;
+      }
+      .dock-pulse-dot::after {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#23140e",
+            "primary-fixed": "#e2b489",
+            "on-secondary-fixed-variant": "#ffdcc3",
+            "on-tertiary-fixed": "#002115",
+            "primary-container": "#633718",
+            "on-secondary-container": "#fff3ec",
+            "on-error": "#ffffff",
+            "surface-variant": "#362017",
+            "on-surface": "#f5ede3",
+            "on-tertiary-container": "#4ba984",
+            "on-tertiary-fixed-variant": "#00513a",
+            "background": "#1f120c",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#d49d6c",
+            "tertiary-fixed-dim": "#7bd8b1",
+            "surface-container-highest": "#44291c",
+            "on-background": "#f5ede3",
+            "inverse-on-surface": "#1f120c",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#f5ede3",
+            "secondary-fixed": "#542c11",
+            "secondary-container": "#c97a32",
+            "tertiary-fixed": "#97f5cc",
+            "tertiary-container": "#003827",
+            "outline": "#8a6652",
+            "secondary-fixed-dim": "#ffb77d",
+            "on-secondary-fixed": "#ffdcc3",
+            "surface-bright": "#3b2216",
+            "inverse-primary": "#f2bb99",
+            "on-primary": "#ffffff",
+            "surface-tint": "#c97a32",
+            "surface-container-lowest": "#170c07",
+            "primary": "#d9863d",
+            "surface-container-low": "#2a1811",
+            "surface-container-high": "#3d2317",
+            "on-primary-fixed-variant": "#2b1406",
+            "surface-container": "#331c13",
+            "secondary": "#df934f",
+            "on-secondary": "#1f120c",
+            "on-primary-container": "#fceadc",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#cfb8a7",
+            "tertiary": "#002115",
+            "outline-variant": "#5a3a29",
+            "on-primary-fixed": "#241004",
+            "error-container": "#ffdad6",
+            "surface-dim": "#1a0e08"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin-tablet": "2rem",
+            "gutter": "1.25rem",
+            "margin": "1rem",
+            "gutter-desktop": "1.75rem"
+          },
+          fontFamily: {
+            "headline": ["Playfair Display", "serif"],
+            "display": ["Playfair Display", "serif"],
+            "body": ["Plus Jakarta Sans", "sans-serif"],
+            "label": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-background font-body text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container" id="home">
+
+  <!-- TOP HEADER WITH NAVIGATION & BILINGUAL TOGGLE -->
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-outline-variant/60 shadow-lg bg-surface/98 backdrop-blur-md">
+    <!-- University Proximity Ribbon -->
+    <div class="bg-surface-container-lowest text-on-surface-variant px-4 py-1.5 border-b border-outline-variant/40">
+      <div class="max-w-7xl mx-auto flex items-center justify-between text-center text-[11px] sm:text-[12px] font-medium tracking-wide">
+        <div class="flex items-center gap-space-sm mx-auto overflow-hidden">
+          <span class="flex items-center gap-1 font-semibold text-primary truncate">
+            <span class="material-symbols-outlined text-[14px] shrink-0">location_on</span>
+            <span class="lang-translatable" data-en="ul. JagielloÅ„ska 22 â€” 3 mins walk from Uniwersytet ÅšlÄ…ski" data-pl="ul. JagielloÅ„ska 22 â€” 3 minuty pieszo od Uniwersytetu ÅšlÄ…skiego (UÅš)">ul. JagielloÅ„ska 22 â€” 3 mins walk from Uniwersytet ÅšlÄ…ski</span>
+          </span>
+          <span class="hidden md:inline text-outline/60">â€¢</span>
+          <span class="hidden md:inline font-medium text-on-surface lang-translatable" data-en="Fresh Madras Kaapi &amp; Masala Chai" data-pl="ÅšwieÅ¼y Madras Kaapi &amp; Gotowany Chai">Fresh Madras Kaapi &amp; Masala Chai</span>
+          <span class="hidden md:inline text-outline/60">â€¢</span>
+          <span class="hidden lg:inline font-medium text-on-surface-variant lang-translatable" data-en="Student Print &amp; Copy Desk" data-pl="Akademicki Punkt Ksero &amp; Druk">Student Print &amp; Copy Desk</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="h-16 sm:h-20 bg-surface/95 backdrop-blur-md transition-all">
+      <div class="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-3 sm:gap-space-md">
+        
+        <!-- Brand Identification -->
+        <a href="#home" class="flex items-center gap-2.5 sm:gap-space-md shrink-0 focus:outline-none" aria-label="El Shaddai Home">
+          <img alt="El Shaddai Cafe &amp; Ksero Brand Logo" class="h-9 sm:h-11 w-auto object-contain rounded-full bg-surface-container-low p-0.5 border border-outline-variant/70 shadow-sm" src="./assets/logo-96.webp"/>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 sm:gap-2">
+              <span class="font-headline text-lg sm:text-xl text-on-surface font-bold tracking-tight">El Shaddai</span>
+              <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full bg-primary/20 text-primary font-semibold text-[10px] tracking-wider uppercase border border-primary/30 lang-translatable" data-en="Indian Cafe &amp; Punkt Ksero" data-pl="Indyjska Kawiarnia &amp; Ksero">
+                Indian Cafe &amp; Punkt Ksero
+              </span>
+            </div>
+            <span class="hidden sm:block font-body text-on-surface-variant text-[11px] tracking-wide lang-translatable" data-en="Traditional Kaapi, Spiced Chai &amp; Print Studio" data-pl="PoÅ‚udniowoindyjski Kaapi, Chai &amp; Drukarnia">Traditional Kaapi, Spiced Chai &amp; Print Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-space-lg" aria-label="Main Navigation">
+          <a class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors lang-translatable" data-en="Story &amp; Vibe" data-pl="O nas &amp; Klimat" href="#story-section">Story &amp; Vibe</a>
+          <a class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors lang-translatable" data-en="The Experience" data-pl="Cztery Filary" href="#experience-section">The Experience</a>
+          <a class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors lang-translatable" data-en="Artisanal Drinks" data-pl="Menu NapojÃ³w" href="#menu-section">Artisanal Drinks</a>
+          <a class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors lang-translatable" data-en="Student Ksero Hub" data-pl="Punkt Ksero" href="#ksero-section">Student Ksero Hub</a>
+          <a class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors lang-translatable" data-en="Location &amp; Hours" data-pl="Lokalizacja" href="#location-section">Location &amp; Hours</a>
+          <a class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors lang-translatable" data-en="Community" data-pl="Opinie" href="#reviews-section">Community</a>
+        </nav>
+
+        <!-- Header Actions & Language Switcher -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          
+          <!-- Magnetic Language Toggle (EN / PL) -->
+          <div class="lang-toggle-wrap" data-active="en" id="langSwitch" role="group" aria-label="Language selector">
+            <span class="lang-slider-pill" aria-hidden="true"></span>
+            <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false">PL</button>
+          </div>
+
+          <a class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-medium text-xs transition-colors border border-outline-variant/70" href="tel:+48507700193" title="Call the cafe at +48 507 700 193">
+            <span class="material-symbols-outlined text-[16px] text-primary">call</span>
+            <span class="hidden 2xl:inline">+48 507 700 193</span>
+            <span class="2xl:hidden lang-translatable" data-en="Call" data-pl="ZadzwoÅ„">Call</span>
+          </a>
+          
+          <a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary transition-colors font-semibold text-xs border border-primary/30" href="https://wa.me/48516699313" rel="noopener noreferrer" target="_blank" title="Send files & chat on WhatsApp: +48 516 699 313">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>WhatsApp</span>
+          </a>
+          
+          <a class="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-primary hover:bg-secondary text-surface-container-lowest font-bold text-xs transition-colors shadow-md" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jagiello%C5%84ska+22%2C+Katowice" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[16px]">near_me</span>
+            <span class="lang-translatable" data-en="Directions" data-pl="Dojazd">Directions</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="nav-toggle" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center border border-outline-variant hover:bg-surface-container-highest transition-colors" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation">
+            <span class="material-symbols-outlined text-2xl" id="nav-toggle-icon">menu</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Responsive Mobile Drawer Navigation -->
+    <div id="navigation" class="hidden xl:hidden bg-surface-container-lowest border-b border-outline-variant/80 px-6 py-5 shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        <a class="mobile-nav-link text-sm font-semibold text-on-surface hover:text-primary py-2.5 px-3 rounded-lg hover:bg-surface-container flex items-center justify-between" href="#story-section">
+          <span class="lang-translatable" data-en="Story &amp; Vibe" data-pl="O nas &amp; Klimat">Story &amp; Vibe</span>
+          <span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link text-sm font-semibold text-on-surface hover:text-primary py-2.5 px-3 rounded-lg hover:bg-surface-container flex items-center justify-between" href="#experience-section">
+          <span class="lang-translatable" data-en="The Four Pillars" data-pl="Cztery Filary">The Four Pillars</span>
+          <span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link text-sm font-semibold text-on-surface hover:text-primary py-2.5 px-3 rounded-lg hover:bg-surface-container flex items-center justify-between" href="#menu-section">
+          <span class="lang-translatable" data-en="Artisanal Drinks (Kaapi &amp; Chai)" data-pl="Menu NapojÃ³w (Kaapi &amp; Chai)">Artisanal Drinks (Kaapi &amp; Chai)</span>
+          <span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link text-sm font-semibold text-on-surface hover:text-primary py-2.5 px-3 rounded-lg hover:bg-surface-container flex items-center justify-between" href="#ksero-section">
+          <span class="lang-translatable" data-en="Student Ksero Hub" data-pl="Punkt Ksero &amp; Druk">Student Ksero Hub</span>
+          <span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link text-sm font-semibold text-on-surface hover:text-primary py-2.5 px-3 rounded-lg hover:bg-surface-container flex items-center justify-between" href="#location-section">
+          <span class="lang-translatable" data-en="Location &amp; Hours" data-pl="Lokalizacja &amp; Godziny">Location &amp; Hours</span>
+          <span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link text-sm font-semibold text-on-surface hover:text-primary py-2.5 px-3 rounded-lg hover:bg-surface-container flex items-center justify-between" href="#reviews-section">
+          <span class="lang-translatable" data-en="Community &amp; Reviews" data-pl="Opinie StudentÃ³w">Community &amp; Reviews</span>
+          <span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+        </a>
+        <div class="pt-3 border-t border-outline-variant/60 flex flex-col gap-2">
+          <a class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-bold text-xs border border-primary/30" href="https://wa.me/48516699313" target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>WhatsApp: +48 516 699 313</span>
+          </a>
+          <a class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-xs border border-outline-variant" href="tel:+48507700193">
+            <span class="material-symbols-outlined text-[16px] text-primary">call</span>
+            <span class="lang-translatable" data-en="Call: +48 507 700 193" data-pl="ZadzwoÅ„: +48 507 700 193">Call: +48 507 700 193</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full pt-24 sm:pt-28 bg-background min-h-screen">
+    <div class="flex flex-col w-full">
+
+      <!-- Top Dynamic Warsaw Status Ribbon -->
+      <div class="w-full bg-surface-container-low border-b border-outline-variant/60 text-on-surface py-2.5 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm text-xs">
+          <div class="flex items-center gap-space-sm font-medium" id="live-time-status">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="font-bold text-primary tracking-wide lang-translatable" data-en="OPEN IN KATOWICE" data-pl="OTWARTE W KATOWICACH">OPEN IN KATOWICE</span>
+            <span class="text-outline-variant">/</span>
+            <span class="text-on-surface-variant">ul. JagielloÅ„ska 22 â€¢ 300m from Uniwersytet ÅšlÄ…ski</span>
+          </div>
+          <div class="flex items-center gap-space-md">
+            <span class="hidden sm:inline-flex items-center gap-1 text-on-surface font-medium">
+              <span class="material-symbols-outlined text-[15px] text-primary">local_cafe</span>
+              <span class="lang-translatable" data-en="Fresh Decoction Dropping" data-pl="ÅšwieÅ¼a Dekokcja KapiÄ…ca">Fresh Decoction Dropping</span>
+            </span>
+            <span class="text-outline-variant hidden sm:inline">/</span>
+            <span class="inline-flex items-center gap-1 text-on-surface-variant font-medium">
+              <span class="material-symbols-outlined text-[15px] text-primary">print</span>
+              <span class="lang-translatable" data-en="Ksero Desk Active" data-pl="Punkt Ksero Gotowy">Ksero Desk Active</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CINEMATIC HERO SECTION -->
+      <section class="w-full relative min-h-[90vh] flex flex-col justify-between overflow-hidden pt-12 pb-10 border-b border-outline-variant/60" id="hero">
+        <!-- Deep Volumetric Mesh Backdrop -->
+        <div class="absolute inset-0 volumetric-mesh pointer-events-none -z-20"></div>
+
+        <!-- Full-Bleed Cinematic Background Video & Overlay -->
+        <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          <video id="heroVideoBg" autoplay muted loop playsinline class="w-full h-full object-cover transition-opacity duration-700 opacity-40">
+            <source src="./assets/hero-bg.mp4" type="video/mp4"/>
+          </video>
+          <!-- Espresso darkening gradient overlay ensuring high contrast -->
+          <div class="absolute inset-0 bg-gradient-to-b from-[#1f120c]/80 via-[#1f120c]/65 to-[#1f120c]"></div>
+          <!-- Ambient Radial Warmth -->
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(217,134,61,0.22),transparent_70%)]"></div>
+        </div>
+
+        <!-- Centered Main Content Area -->
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10 flex-1 flex flex-col justify-center items-center py-8" data-reveal="fade-up">
+          
+          <!-- Dual Brand Badge -->
+          <div class="inline-flex items-center gap-2.5 bg-surface-container-high/85 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-outline-variant/80 shadow-lg">
+            <img alt="El Shaddai Stamp Emblem" class="w-6 h-6 object-contain rounded-full bg-surface-container-lowest p-0.5" src="./assets/logo-96.webp"/>
+            <span class="text-xs font-semibold text-primary uppercase tracking-widest lang-translatable" data-en="Two Worlds â€¢ One Warm Table" data-pl="Dwa Åšwiaty â€¢ Jeden CiepÅ‚y Stolik">Two Worlds â€¢ One Warm Table</span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-bold border border-primary/30">ul. JagielloÅ„ska 22</span>
+          </div>
+
+          <!-- Massive Spatial Headline -->
+          <h1 class="spatial-headline mb-4">
+            EL SHADDAI
+          </h1>
+          
+          <p class="font-headline text-2xl sm:text-3xl lg:text-4xl text-[#e6d7bd] font-normal tracking-wide mb-6 max-w-3xl mx-auto">
+            <span class="italic font-serif text-primary lang-translatable" data-en="Artisanal Kaapi" data-pl="RzemieÅ›lnicze Kaapi">Artisanal Kaapi</span> <span class="text-on-surface-variant">&amp;</span> <span class="italic font-serif text-[#d9863d] lang-translatable" data-en="Regional Chai Sanctuary" data-pl="Regionalny Chai &amp; Azyl">Regional Chai Sanctuary</span>
+          </p>
+
+          <!-- Subtitle -->
+          <p class="font-body text-base sm:text-lg text-on-surface-variant mb-8 max-w-2xl mx-auto leading-relaxed lang-translatable" data-en="Where authentic South Indian brass filter decoctions and crushed spice chai meet collegiate productivity on ul. JagielloÅ„ska 22, Katowice â€” steps away from the University of Silesia." data-pl="Tradycyjna kawa filtrowana w mosiÄ™Å¼nych naczyniach dabarah i parujÄ…cy korzenny chai spotykajÄ… siÄ™ z akademickÄ… produktywnoÅ›ciÄ… przy ul. JagielloÅ„skiej 22 w Katowicach â€” zaledwie parÄ™ krokÃ³w od rektoratu Uniwersytetu ÅšlÄ…skiego.">
+            Where authentic South Indian brass filter decoctions and crushed spice chai meet collegiate productivity on ul. JagielloÅ„ska 22, Katowice â€” steps away from the University of Silesia.
+          </p>
+
+          <!-- Magnetic Minimalist UI: Primary Magnetic Button + Secondary Links -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full mb-6">
+            <a id="heroMagneticBtn" href="https://wa.me/48516699313" target="_blank" rel="noopener noreferrer" class="magnetic-btn group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-primary/25 hover:bg-primary/35 backdrop-blur-xl border border-primary/50 text-[#f5ede3] font-bold text-base shadow-[0_8px_32px_rgba(217,134,61,0.25)] hover:border-primary transition-all duration-300 transform">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="lang-translatable" data-en="Order on WhatsApp: +48 516 699 313" data-pl="ZamÃ³w na WhatsApp: +48 516 699 313">Order on WhatsApp: +48 516 699 313</span>
+              <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+
+            <!-- Fluid Expanding Underline Secondary Links -->
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold">
+              <a href="#menu-section" class="fluid-underline">
+                <span class="lang-translatable" data-en="Explore Drink Menu" data-pl="Karta NapojÃ³w">Explore Drink Menu</span>
+                <span class="material-symbols-outlined text-[16px]">expand_more</span>
+              </a>
+              <a href="#ksero-section" class="fluid-underline">
+                <span class="lang-translatable" data-en="Send Files to Print" data-pl="Drukuj Pliki">Send Files to Print</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Jagiello%C5%84ska+22%2C+Katowice" target="_blank" rel="noopener noreferrer" class="fluid-underline hidden md:inline-flex">
+                <span class="lang-translatable" data-en="Get Route (3 Min Walk)" data-pl="DojÅ›cie (3 Minuty)">Get Route (3 Min Walk)</span>
+                <span class="material-symbols-outlined text-[16px]">navigation</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Single-Line Interactive Hotspot Dock (Bottom of Hero) -->
+        <div class="w-full max-w-5xl mx-auto px-6 relative z-10">
+          <div class="p-2 sm:p-2.5 rounded-2xl bg-surface-container-high/80 backdrop-blur-xl border border-outline-variant/70 shadow-2xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center" id="heroHotspotDock">
+              
+              <button type="button" class="hotspot-item group flex items-center justify-center gap-2.5 px-3.5 py-3 rounded-xl hover:bg-surface-container-highest/90 border border-transparent hover:border-primary/40 text-left cursor-pointer transition-all" data-video="./assets/hover-kaapi.mp4">
+                <span class="text-xl group-hover:scale-110 transition-transform">â˜•</span>
+                <div>
+                  <p class="font-headline text-xs sm:text-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-tight lang-translatable" data-en="Madras Filter Kaapi" data-pl="Madras Filter Kaapi">Madras Filter Kaapi</p>
+                  <p class="font-body text-[10px] text-on-surface-variant lang-translatable" data-en="Brass dabarah ritual" data-pl="MosiÄ™Å¼ne dabarah">Brass dabarah ritual</p>
+                </div>
+              </button>
+
+              <button type="button" class="hotspot-item group flex items-center justify-center gap-2.5 px-3.5 py-3 rounded-xl hover:bg-surface-container-highest/90 border border-transparent hover:border-primary/40 text-left cursor-pointer transition-all" data-video="./assets/hover-chai.mp4">
+                <span class="text-xl group-hover:scale-110 transition-transform">ðŸ«–</span>
+                <div>
+                  <p class="font-headline text-xs sm:text-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-tight lang-translatable" data-en="Regional Spiced Chai" data-pl="Regionalny Chai">Regional Spiced Chai</p>
+                  <p class="font-body text-[10px] text-on-surface-variant lang-translatable" data-en="Crushed ginger &amp; elaichi" data-pl="TÅ‚uczony imbir i kardamon">Crushed ginger &amp; elaichi</p>
+                </div>
+              </button>
+
+              <button type="button" class="hotspot-item group flex items-center justify-center gap-2.5 px-3.5 py-3 rounded-xl hover:bg-surface-container-highest/90 border border-transparent hover:border-primary/40 text-left cursor-pointer transition-all" data-img="./assets/ksero-printer.webp">
+                <span class="text-xl group-hover:scale-110 transition-transform">ðŸ–¨ï¸</span>
+                <div>
+                  <p class="font-headline text-xs sm:text-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-tight lang-translatable" data-en="Rapid Student Ksero" data-pl="Punkt Ksero UÅš">Rapid Student Ksero</p>
+                  <p class="font-body text-[10px] text-on-surface-variant lang-translatable" data-en="Laser print &amp; copy" data-pl="Druk laserowy i ksero">Laser print &amp; copy</p>
+                </div>
+              </button>
+
+              <button type="button" class="hotspot-item group flex items-center justify-center gap-2.5 px-3.5 py-3 rounded-xl hover:bg-surface-container-highest/90 border border-transparent hover:border-primary/40 text-left cursor-pointer transition-all" data-video="./assets/hover-haven.mp4">
+                <span class="text-xl group-hover:scale-110 transition-transform">ðŸ›ï¸</span>
+                <div>
+                  <p class="font-headline text-xs sm:text-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-tight lang-translatable" data-en="Academic Haven" data-pl="Azyl Akademicki">Academic Haven</p>
+                  <p class="font-body text-[10px] text-on-surface-variant lang-translatable" data-en="Quiet brick study vibe" data-pl="Ceglana oaza do nauki">Quiet brick study vibe</p>
+                </div>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE EL SHADDAI PILLARS (Authentic Core Offerings) -->
+      <section class="w-full bg-surface-container-lowest py-14 border-y border-outline-variant/60" id="experience-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4" data-reveal="fade-up">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-bold text-xs uppercase tracking-wider border border-primary/30 mb-2">
+                <img src="./assets/golden-cup-icon.png" alt="Golden cup" class="w-4 h-4 object-contain inline-block"/>
+                <span class="lang-translatable" data-en="The Authentic Experience" data-pl="Autentyczne DoÅ›wiadczenie">The Authentic Experience</span>
+              </div>
+              <h2 class="font-headline text-3xl sm:text-4xl font-bold text-on-surface lang-translatable" data-en="Four Pillars Under One Warm Roof" data-pl="Cztery Filary pod Jednym CiepÅ‚ym Dachem">Four Pillars Under One Warm Roof</h2>
+            </div>
+            <p class="font-body text-sm text-on-surface-variant max-w-md lang-translatable" data-en="A purposeful blend of traditional South Indian brewing, aromatic chai rituals, collegiate study desks, and rapid document printing." data-pl="Harmonijne poÅ‚Ä…czenie poÅ‚udniowoindyjskich tradycji parzenia, aromatycznego chai, stolikÃ³w do nauki i ekspresowego punktu ksero.">
+              A purposeful blend of traditional South Indian brewing, aromatic chai rituals, collegiate study desks, and rapid document printing.
+            </p>
+          </div>
+
+          <!-- 4 Pillars Cards Grid with Scroll Stagger -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" data-reveal-group="stagger">
+            
+            <!-- Pillar 1: Our Coffee -->
+            <a href="#menu-section" class="group rounded-2xl bg-surface-container-high border border-outline-variant hover:border-primary/60 transition-all overflow-hidden shadow-md hover:shadow-xl flex flex-col" data-reveal-item>
+              <div class="h-44 overflow-hidden relative bg-surface-container-lowest">
+                <img src="./assets/card-coffee.webp" alt="Our Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors block lang-translatable" data-en="Our Coffee" data-pl="Nasza Kawa">Our Coffee</span>
+                  <span class="font-body text-[11px] text-primary uppercase font-bold tracking-wider mt-1 block lang-translatable" data-en="Rich Taste â€¢ Pure Indian Flavour" data-pl="GÅ‚Ä™boki Smak â€¢ Indyjski Aromat">Rich Taste â€¢ Pure Indian Flavour</span>
+                  <p class="font-body text-xs text-on-surface-variant mt-2 leading-relaxed lang-translatable" data-en="Steeped in traditional brass dabarah &amp; tumbler. Chicory blend from Chikmagalur hills with hot frothed milk." data-pl="Parzona w tradycyjnym naczyniu dabarah. Mieszanka kawy i cykorii z plantacji Chikmagalur ze spienionym mlekiem.">
+                    Steeped in traditional brass dabarah &amp; tumbler. Chicory blend from Chikmagalur hills with hot frothed milk.
+                  </p>
+                </div>
+                <span class="text-xs text-primary font-bold mt-4 inline-flex items-center gap-1 lang-translatable" data-en="Explore Kaapi Menu â†’" data-pl="Zobacz Menu Kawy â†’">Explore Kaapi Menu â†’</span>
+              </div>
+            </a>
+
+            <!-- Pillar 2: Artisanal Chai -->
+            <a href="#menu-section" class="group rounded-2xl bg-surface-container-high border border-outline-variant hover:border-primary/60 transition-all overflow-hidden shadow-md hover:shadow-xl flex flex-col" data-reveal-item>
+              <div class="h-44 overflow-hidden relative bg-surface-container-lowest">
+                <img src="./assets/tea.webp" alt="Regional Spiced Chai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors block lang-translatable" data-en="Regional Chai" data-pl="Regionalny Chai">Regional Chai</span>
+                  <span class="font-body text-[11px] text-secondary uppercase font-bold tracking-wider mt-1 block lang-translatable" data-en="Warming â€¢ Aromatic â€¢ Hand-Brewed" data-pl="RozgrzewajÄ…cy â€¢ Aromatyczny â€¢ Domowy">Warming â€¢ Aromatic â€¢ Hand-Brewed</span>
+                  <p class="font-body text-xs text-on-surface-variant mt-2 leading-relaxed lang-translatable" data-en="Black tea simmered with freshly crushed ginger root, green cardamom pods, cloves, and whole spices." data-pl="Czarna herbata powoli gotowana ze Å›wieÅ¼o tÅ‚uczonym imbirem, zielonym kardamonem i caÅ‚ymi przyprawami.">
+                    Black tea simmered with freshly crushed ginger root, green cardamom pods, cloves, and whole spices.
+                  </p>
+                </div>
+                <span class="text-xs text-primary font-bold mt-4 inline-flex items-center gap-1 lang-translatable" data-en="Discover Chai Kettle â†’" data-pl="Poznaj Nasz Chai â†’">Discover Chai Kettle â†’</span>
+              </div>
+            </a>
+
+            <!-- Pillar 3: Ksero Services -->
+            <a href="#ksero-section" class="group rounded-2xl bg-surface-container-high border border-outline-variant hover:border-primary/60 transition-all overflow-hidden shadow-md hover:shadow-xl flex flex-col" data-reveal-item>
+              <div class="h-44 overflow-hidden relative bg-surface-container-lowest">
+                <img src="./assets/ksero-printer.webp" alt="Ksero Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors block lang-translatable" data-en="Ksero Services" data-pl="Punkt Ksero">Ksero Services</span>
+                  <span class="font-body text-[11px] text-primary uppercase font-bold tracking-wider mt-1 block lang-translatable" data-en="Print â€¢ Copy â€¢ Scan â€¢ Bind" data-pl="Druk â€¢ Ksero â€¢ Skan â€¢ Oprawa">Print â€¢ Copy â€¢ Scan â€¢ Bind</span>
+                  <p class="font-body text-xs text-on-surface-variant mt-2 leading-relaxed lang-translatable" data-en="Fast collegiate print desk. Instant printing and WhatsApp file dispatch." data-pl="Ekspresowy punkt ksero. Twarda oprawa prac magisterskich i licencjackich oraz wysyÅ‚ka plikÃ³w przez WhatsApp.">
+                    Fast collegiate print desk. Instant printing and WhatsApp file dispatch.
+                  </p>
+                </div>
+                <span class="text-xs text-primary font-bold mt-4 inline-flex items-center gap-1 lang-translatable" data-en="View Print Desk Details â†’" data-pl="SzczegÃ³Å‚y UsÅ‚ug Druku â†’">View Print Desk Details â†’</span>
+              </div>
+            </a>
+
+            <!-- Pillar 4: Visit Us -->
+            <a href="#location-section" class="group rounded-2xl bg-surface-container-high border border-outline-variant hover:border-primary/60 transition-all overflow-hidden shadow-md hover:shadow-xl flex flex-col" data-reveal-item>
+              <div class="h-44 overflow-hidden relative bg-surface-container-lowest">
+                <img src="./assets/cafe-community.webp" alt="Visit Us" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors block lang-translatable" data-en="Visit Us" data-pl="OdwiedÅº Nas">Visit Us</span>
+                  <span class="font-body text-[11px] text-secondary uppercase font-bold tracking-wider mt-1 block lang-translatable" data-en="Quiet Space â€¢ Great Coffee â€¢ Warm Table" data-pl="Cisza â€¢ Pyszny Napar â€¢ CiepÅ‚y KÄ…t">Quiet Space â€¢ Great Coffee â€¢ Warm Table</span>
+                  <p class="font-body text-xs text-on-surface-variant mt-2 leading-relaxed lang-translatable" data-en="ul. JagielloÅ„ska 22, Katowice. 3 minutes walk from Uniwersytet ÅšlÄ…ski rectorate and campus faculties." data-pl="ul. JagielloÅ„ska 22 w Katowicach. 3 minuty pieszo od rektoratu UÅš i wydziaÅ‚Ã³w akademickich.">
+                    ul. JagielloÅ„ska 22, Katowice. 3 minutes walk from Uniwersytet ÅšlÄ…ski rectorate and campus faculties.
+                  </p>
+                </div>
+                <span class="text-xs text-primary font-bold mt-4 inline-flex items-center gap-1 lang-translatable" data-en="Find On Map â†’" data-pl="Zobacz na Mapie â†’">Find On Map â†’</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DUAL CONCEPT STORY & VIBE -->
+      <section class="w-full bg-surface-container-low py-16 border-b border-outline-variant/60" id="story-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Story Copy -->
+            <div class="lg:col-span-6 space-y-5" data-reveal="fade-up">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-bold text-xs uppercase tracking-wider border border-primary/30 lang-translatable" data-en="Our Origin &amp; Vibe" data-pl="Klimat &amp; O Nas">
+                Our Origin &amp; Vibe
+              </div>
+              <h2 class="font-headline text-3xl sm:text-4xl lg:text-4xl text-on-surface font-bold lang-translatable" data-en="â€œCoffee House Meets Collegiate Commons.â€" data-pl="â€žKawiarnia Spotyka PrzestrzeÅ„ AkademickÄ….â€">
+                â€œCoffee House Meets Collegiate Commons.â€
+              </h2>
+              <p class="font-body text-base text-on-surface-variant leading-relaxed lang-translatable" data-en="Katowice is a university city buzzing with ideas, deadlines, and international minds. El Shaddai was born out of a simple need: students and academics needed a warm, unhurried space that serves real, soulful South Indian decoction coffee, alongside an ultra-dependable print desk where you can photocopy seminar readings without running across town." data-pl="Katowice to tÄ™tniÄ…ce energiÄ… miasto akademickie peÅ‚ne projektÃ³w, sesji i miÄ™dzynarodowych umysÅ‚Ã³w. El Shaddai powstaÅ‚o z prostej potrzeby: studenci i wykÅ‚adowcy potrzebowali spokojnego, ciepÅ‚ego miejsca z prawdziwÄ… indyjskÄ… kawÄ… filtrowanÄ… i herbatÄ… chai oraz niezawodnym punktem ksero, gdzie ekspresowo oprawiÄ… pracÄ™ magisterskÄ… lub wydrukujÄ… notatki bez krÄ…Å¼enia po mieÅ›cie.">
+                Katowice is a university city buzzing with ideas, deadlines, and international minds. El Shaddai was born out of a simple need: students and academics needed a warm, unhurried space that serves <span class="font-bold text-primary">real, soulful South Indian decoction coffee</span>, alongside an ultra-dependable print desk where you can photocopy seminar readings without running across town.
+              </p>
+              <p class="font-body text-sm text-on-surface-variant leading-relaxed lang-translatable" data-en="We deliberately do not operate a kitchen or sell food, ensuring zero frying smells, pure beverage craft, and pristine document printing. Exposed Katowice brick, warm sunlight on wide window sills, and reliable Wi-Fi offer a genuine haven between lectures." data-pl="Åšwiadomie nie prowadzimy kuchni ani sprzedaÅ¼y jedzenia czy przekÄ…sek. DziÄ™ki temu w lokalu nie ma zapachÃ³w smaÅ¼enia, a caÅ‚a uwaga skupiona jest na kunszcie ekstrakcji napojÃ³w i czystoÅ›ci druku. Zabytkowa cegÅ‚a, szerokie parapety z widokiem na JagielloÅ„skÄ… i szybkie Wi-Fi tworzÄ… idealnÄ… przestrzeÅ„ do nauki.">
+                We deliberately do not operate a kitchen or sell food, ensuring zero frying smells, pure beverage craft, and pristine document printing. Exposed Katowice brick, warm sunlight on wide window sills, and reliable Wi-Fi offer a genuine haven between lectures.
+              </p>
+              <div class="grid grid-cols-3 gap-3.5 pt-3">
+                <div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/70 shadow-sm text-center">
+                  <span class="block font-headline text-2xl text-primary font-bold">100%</span>
+                  <span class="font-body text-on-surface-variant text-[11px] uppercase tracking-wider font-semibold lang-translatable" data-en="Brass Dabarah Pours" data-pl="MosiÄ™Å¼ne Dabarah">Brass Dabarah Pours</span>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/70 shadow-sm text-center">
+                  <span class="block font-headline text-2xl text-primary font-bold">3 Min</span>
+                  <span class="font-body text-on-surface-variant text-[11px] uppercase tracking-wider font-semibold lang-translatable" data-en="Walk to Rectorate" data-pl="Spacerem z Rektoratu">Walk to Rectorate</span>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/70 shadow-sm text-center">
+                  <span class="block font-headline text-2xl text-primary font-bold lang-translatable" data-en="Formats" data-pl="Formaty">Formats</span>
+                  <span class="font-body text-on-surface-variant text-[11px] uppercase tracking-wider font-semibold lang-translatable" data-en="Print Desk" data-pl="Drukowanie">Print Desk</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Asymmetric Visual Panels -->
+            <div class="lg:col-span-6 grid grid-cols-2 gap-4" data-reveal="scale-up">
+              <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-surface-container-high border border-outline-variant/70 shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-3xl mb-2">local_cafe</span>
+                  <h3 class="font-headline text-xl text-on-surface font-bold mb-1 lang-translatable" data-en="South Indian Soul" data-pl="Dusza PoÅ‚udniowych Indii">South Indian Soul</h3>
+                  <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="Steeped Indian peaberry beans, slow gravity drip, hand-frothed in traditional brass vessels with caramelized whole milk." data-pl="Ziarna peaberry parzone kropelkowo, Å‚Ä…czone z aksamitnym mlekiem w mosiÄ™Å¼nych naczyniach.">Steeped Indian peaberry beans, slow gravity drip, hand-frothed in traditional brass vessels with caramelized whole milk.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-surface-container-highest border border-outline-variant shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-3xl mb-2">bolt</span>
+                  <h3 class="font-headline text-xl text-on-surface font-bold mb-1 lang-translatable" data-en="Academic Utility" data-pl="Wygoda dla Uczelni">Academic Utility</h3>
+                  <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="Send your papers directly via WhatsApp, walk 3 minutes from your lecture hall, grab your printed documents and hot kaapi instantly." data-pl="WyÅ›lij pliki przez WhatsApp, podejdÅº 3 minuty z auli, odbierz gotowÄ… pracÄ™ i gorÄ…cy napÃ³j bez kolejki.">Send your papers directly via WhatsApp, walk 3 minutes from your lecture hall, grab your printed documents and hot kaapi instantly.</p>
+                </div>
+              </div>
+              <div class="space-y-4 pt-6">
+                <div class="p-6 rounded-2xl bg-surface-container-high border border-outline-variant/70 shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-3xl mb-2">spa</span>
+                  <h3 class="font-headline text-xl text-on-surface font-bold mb-1 lang-translatable" data-en="Authentic Spices" data-pl="Naturalne Przyprawy">Authentic Spices</h3>
+                  <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="Whole green cardamom, spicy ginger root, cloves, and cinnamon simmered gently in black Assam tea." data-pl="ÅšwieÅ¼o tÅ‚uczony imbir, zielony kardamon, goÅºdziki i cynamon gotowane w liÅ›ciastej herbacie Assam.">Whole green cardamom, spicy ginger root, cloves, and cinnamon simmered gently in black Assam tea.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-surface-container-highest border border-outline-variant shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-3xl mb-2">groups</span>
+                  <h3 class="font-headline text-xl text-on-surface font-bold mb-1 lang-translatable" data-en="Cozy Brick Sanctuary" data-pl="Ceglany Azyl">Cozy Brick Sanctuary</h3>
+                  <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="Exposed historic Katowice brick, power outlets on every wooden table, and quiet corners for focused deep work." data-pl="Zabytkowa katowicka cegÅ‚a, gniazdka przy stolikach i spokojne zakÄ…tki do skupionej nauki.">Exposed historic Katowice brick, power outlets on every wooden table, and quiet corners for focused deep work.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Authentic Glimpse of ul. JagielloÅ„ska 22 (Real Cafe Gallery) -->
+          <div class="mt-14 pt-10 border-t border-outline-variant/60" data-reveal="fade-up">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-primary font-bold lang-translatable" data-en="Authentic Katowice Atmosphere" data-pl="Klimat Lokalu w Katowicach">Authentic Katowice Atmosphere</span>
+                <h3 class="font-headline text-2xl sm:text-3xl font-bold text-on-surface mt-1 lang-translatable" data-en="Real Spaces â€¢ Brick Walls â€¢ Sunny Windows" data-pl="Ceglane Åšciany â€¢ SÅ‚oneczne Okna â€¢ Przytulne WnÄ™trze">Real Spaces â€¢ Brick Walls â€¢ Sunny Windows</h3>
+              </div>
+              <span class="text-xs text-on-surface-variant font-medium lang-translatable" data-en="Inside El Shaddai, ul. JagielloÅ„ska 22" data-pl="WnÄ™trze El Shaddai, ul. JagielloÅ„ska 22">Inside El Shaddai, ul. JagielloÅ„ska 22</span>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5" data-reveal-group="stagger">
+              <!-- Real Photo 1: Authentic Brick Menu Board -->
+              <div class="group rounded-2xl bg-surface-container-high border border-outline-variant overflow-hidden shadow-md flex flex-col" data-reveal-item>
+                <div class="h-48 overflow-hidden relative bg-surface-container-lowest">
+                  <img src="./assets/story-menu-board.webp" alt="El Shaddai Authentic Coffee &amp; Tea Board on Brick Wall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-transparent pointer-events-none"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs font-bold text-on-surface lang-translatable" data-en="Original Brick Wall Menu" data-pl="Tablica Menu na Ceglanej Åšcianie">Original Brick Wall Menu</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="Pure artisanal focus: authentic Indian milk &amp; black coffee, alongside fresh hand-brewed spiced tea. No frying, no food smells." data-pl="Czyste rzemiosÅ‚o: autentyczna kawa mleczna i czarna oraz Å›wieÅ¼o parzona herbata korzenna. Zero smaÅ¼enia i zapachÃ³w jedzenia.">Pure artisanal focus: authentic Indian milk &amp; black coffee, alongside fresh hand-brewed spiced tea. No frying, no food smells.</p>
+                </div>
+              </div>
+
+              <!-- Real Photo 2: Storefront SMILE Mug -->
+              <div class="group rounded-2xl bg-surface-container-high border border-outline-variant overflow-hidden shadow-md flex flex-col" data-reveal-item>
+                <div class="h-48 overflow-hidden relative bg-surface-container-lowest">
+                  <img src="./assets/story-smile-mug.webp" alt="El Shaddai Storefront Entrance Sign at ul. JagielloÅ„ska 22" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-transparent pointer-events-none"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs font-bold text-on-surface lang-translatable" data-en="Storefront at ul. JagielloÅ„ska 22" data-pl="WejÅ›cie przy ul. JagielloÅ„skiej 22">Storefront at ul. JagielloÅ„ska 22</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="Warm hospitality and cheerful smiles right on the bustling academic pedestrian corridor, 3 minutes from University of Silesia." data-pl="CiepÅ‚a goÅ›cinnoÅ›Ä‡ i uÅ›miech tuÅ¼ przy tÄ™tniÄ…cej Å¼yciem uniwersyteckiej ulicy, 3 minuty od Uniwersytetu ÅšlÄ…skiego.">Warm hospitality and cheerful smiles right on the bustling academic pedestrian corridor, 3 minutes from University of Silesia.</p>
+                </div>
+              </div>
+
+              <!-- Real Photo 3: Cozy Lounge Sofa -->
+              <div class="group rounded-2xl bg-surface-container-high border border-outline-variant overflow-hidden shadow-md flex flex-col" data-reveal-item>
+                <div class="h-48 overflow-hidden relative bg-surface-container-lowest">
+                  <img src="./assets/story-lounge.webp" alt="El Shaddai Study Lounge and Armchairs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-transparent pointer-events-none"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs font-bold text-on-surface lang-translatable" data-en="Cozy Collegiate Lounge" data-pl="Strefa Wypoczynku i Nauki">Cozy Collegiate Lounge</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="Comfortable armchairs and quiet study desks with accessible power plugs for laptop work and group assignments." data-pl="Wygodne fotele i ciche stoliki do nauki z Å‚atwym dostÄ™pem do gniazdek elektrycznych na laptopy.">Comfortable armchairs and quiet study desks with accessible power plugs for laptop work and group assignments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ARTISANAL DRINKS MENU (BILINGUAL, NO PRICES, NO FOOD) -->
+      <section class="w-full bg-surface py-16" id="menu-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-space-md" data-reveal="fade-up">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-primary font-bold lang-translatable" data-en="Handcrafted In Brass &amp; Clay" data-pl="RzemiosÅ‚o w MosiÄ…dzu i Glinie">Handcrafted In Brass &amp; Clay</span>
+              <h2 class="font-headline text-3xl sm:text-4xl text-on-surface font-bold mt-1 lang-translatable" data-en="Artisanal Beverage Collection" data-pl="Karta RzemieÅ›lniczych NapojÃ³w">Artisanal Beverage Collection</h2>
+              <p class="font-body text-sm text-on-surface-variant max-w-xl mt-1 lang-translatable" data-en="Every cup brewed following centuries-old South Indian gravity decoction and street kettle traditions. Inquire or order directly on WhatsApp." data-pl="KaÅ¼dy napÃ³j przygotowywany wedÅ‚ug tradycyjnych indyjskich receptur. Zapytaj baristÄ™ lub zamÃ³w bezpoÅ›rednio przez WhatsApp.">
+                Every cup brewed following centuries-old South Indian gravity decoction and street kettle traditions. Inquire or order directly on WhatsApp.
+              </p>
+            </div>
+            
+            <!-- Filter Badges with Sliding Highlight Pill -->
+            <div class="menu-filters-wrap" id="menuFiltersWrap" role="tablist" aria-label="Menu Filters">
+              <span class="filter-slider-pill" id="filterSliderPill" aria-hidden="true"></span>
+              <button class="menu-filter-btn is-active lang-translatable" data-category="all" data-en="All Drinks (12)" data-pl="Wszystkie (12)" role="tab" aria-selected="true" onclick="filterMenu('all', event)">All Drinks (12)</button>
+              <button class="menu-filter-btn lang-translatable" data-category="coffee" data-en="Filter Kaapi (6)" data-pl="Kawa Kaapi (6)" role="tab" aria-selected="false" onclick="filterMenu('coffee', event)">Filter Kaapi (6)</button>
+              <button class="menu-filter-btn lang-translatable" data-category="chai" data-en="Regional Chai (6)" data-pl="Regionalny Chai (6)" role="tab" aria-selected="false" onclick="filterMenu('chai', event)">Regional Chai (6)</button>
+            </div>
+          </div>
+
+          <!-- Menu Category 1: Filter Coffee -->
+          <div class="menu-cat mb-12" data-category="coffee">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-lg border border-primary/30 shrink-0">â˜•</span>
+              <h3 class="font-headline text-2xl font-bold text-on-surface lang-translatable" data-en="South Indian Filter Coffee Collection" data-pl="Kolekcja PoÅ‚udniowoindyjskiej Kawy Kaapi">South Indian Filter Coffee Collection</h3>
+              <span class="h-px flex-1 bg-outline-variant/60 ml-3"></span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5" data-reveal-group="stagger">
+              <!-- Item 1: Traditional Madras Kaapi -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-1.webp" alt="Traditional Madras Kaapi" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Brass Dabarah" data-pl="MosiÄ™Å¼na Dabarah">Brass Dabarah</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Traditional Madras Kaapi</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="House Signature" data-pl="SpecjalnoÅ›Ä‡">House Signature</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Frothy, rich dark roast with traditional chicory blend. Poured and aerated in an authentic brass dabarah &amp; tumbler." data-pl="Mocna, kremowa kawa ciemno palona z cykoriÄ…. Aerowana z wysokoÅ›ci w tradycyjnym mosiÄ™Å¼nym naczyniu dabarah.">Frothy, rich dark roast with traditional chicory blend. Poured and aerated in an authentic brass dabarah &amp; tumbler.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Chikmagalur Roast" data-pl="Palarnia Chikmagalur">Chikmagalur Roast</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Traditional%20Madras%20Kaapi." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Mysore Royal Strong Kaapi -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-2.webp" alt="Mysore Royal Strong Kaapi" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Dark Peaberry" data-pl="Ciemny Peaberry">Dark Peaberry</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Mysore Royal Strong Kaapi</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="High Intensity" data-pl="Mocny Ekstrakt">High Intensity</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Double-decoction extract for focused exam sessions. Intense chocolatey aroma, heavy body, balanced with sweet whole milk." data-pl="PodwÃ³jna dekokcja na czas intensywnej nauki. Wyrazisty czekoladowy aromat, gÄ™ste body z dodatkiem mleka.">Double-decoction extract for focused exam sessions. Intense chocolatey aroma, heavy body, balanced with sweet whole milk.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Extra Bold Brew" data-pl="Mocne Pobudzenie">Extra Bold Brew</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Mysore%20Royal%20Strong%20Kaapi." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: Iced Kaapi Cold Brew -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-3.webp" alt="Iced Kaapi Cold Brew" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-secondary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Chilled Special" data-pl="Na Zimno">Chilled Special</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Iced Kaapi Cold Brew</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-bold lang-translatable" data-en="Chilled Special" data-pl="Na Zimno">Chilled Special</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Chilled South Indian filter decoction shaken vigorously with condensed milk and whole milk over crushed ice." data-pl="MroÅ¼ona indyjska dekokcja kawowa wstrzÄ…Å›niÄ™ta z mlekiem skondensowanym i lodem.">Chilled South Indian filter decoction shaken vigorously with condensed milk and whole milk over crushed ice.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-secondary font-medium lang-translatable" data-en="Iced &amp; Frothy" data-pl="Z Lodem &amp; PiankÄ…">Iced &amp; Frothy</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Iced%20Kaapi%20Cold%20Brew." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4: Kumbakonam Degree Coffee -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-4.webp" alt="Kumbakonam Degree Coffee" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Pure Decoction" data-pl="Czysta Dekokcja">Pure Decoction</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Kumbakonam Degree Coffee</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Pure Decoction" data-pl="Czysta Dekokcja">Pure Decoction</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Centuries-old Tamil tradition using pure cow's milk froth and the first thick drip of Chicory-Peaberry coffee decoction." data-pl="SÅ‚ynna receptura z regionu Kumbakonam: gorÄ…ce peÅ‚ne mleko i pierwsza najgÄ™stsza frakcja ekstraktu z filtra.">Centuries-old Tamil tradition using pure cow's milk froth and the first thick drip of Chicory-Peaberry coffee decoction.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="First Drip Purity" data-pl="Pierwszy TÅ‚ok">First Drip Purity</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Kumbakonam%20Degree%20Coffee." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5: Filter Coffee with Cardamom -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-5.webp" alt="Filter Coffee with Cardamom" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-on-surface-variant font-medium lang-translatable" data-en="Green Elaichi" data-pl="Zielony Kardamon">Green Elaichi</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Filter Coffee with Cardamom</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-medium lang-translatable" data-en="Spiced Infusion" data-pl="Z Kardamonem">Spiced Infusion</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Traditional South Indian filter coffee elevated with freshly crushed green cardamom. Uplifting herbal spice meets dark roast." data-pl="Klasyczny Filter Kaapi wzbogacony Å›wieÅ¼o tÅ‚uczonym zielonym kardamonem o szlachetnym aromacie.">Traditional South Indian filter coffee elevated with freshly crushed green cardamom. Uplifting herbal spice meets dark roast.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Green Elaichi" data-pl="Zielony Kardamon">Green Elaichi</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Filter%20Coffee%20with%20Cardamom." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 6: Filter Kaapi Black -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-6.webp" alt="Filter Kaapi Black" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Zero Milk / Pure" data-pl="Bez Mleka / Czysta">Zero Milk / Pure</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Filter Kaapi Black</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Unsweetened" data-pl="Czarna">Unsweetened</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Pure straight gravity-drip filter decoction without milk. Intense, aromatic, and deeply restorative for purists." data-pl="Czysta esencja z filtra bez dodatku mleka. Niezwykle intensywna, aromatyczna dla koneserÃ³w czarnej kawy.">Pure straight gravity-drip filter decoction without milk. Intense, aromatic, and deeply restorative for purists.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Pure Decoction" data-pl="Czysta Dekokcja">Pure Decoction</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Filter%20Kaapi%20Black." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu Category 2: Regional Spiced Chai -->
+          <div class="menu-cat mb-12" data-category="chai">
+            <div class="flex items-center gap-3 mb-6">
+              <!-- Small pink teapot badge with slow looping ambient rising steam -->
+              <div class="chai-kettle-badge relative w-10 h-10 rounded-xl bg-surface-container-high border border-outline-variant flex items-center justify-center shrink-0" aria-hidden="true">
+                <!-- Ambient Steam Lines -->
+                <svg class="steam-container absolute -top-4 left-1/2 -translate-x-1/2 pointer-events-none" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                  <path class="steam-line steam-1" d="M5 18C5 13 8 11 8 7C8 4 6 3 6 1" stroke="rgba(240, 149, 149, 0.75)" stroke-width="1.4" stroke-linecap="round"/>
+                  <path class="steam-line steam-2" d="M12 18C12 14 15 11 15 7C15 4 13 3 13 1" stroke="rgba(245, 237, 227, 0.85)" stroke-width="1.6" stroke-linecap="round"/>
+                  <path class="steam-line steam-3" d="M19 18C19 13 16 11 16 7C16 4 18 3 18 1" stroke="rgba(217, 134, 61, 0.75)" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+                <!-- Small Pink Teapot Icon -->
+                <svg class="w-5 h-5 text-[#f09595] relative z-10 transition-transform hover:rotate-[-6deg]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 10V8h-2V6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v2c0 2.21 1.79 4 4 4h.18C6.6 17.18 8.13 18 10 18h4c1.87 0 3.4-.82 3.82-2H18c2.21 0 4-1.79 4-4v-2zm-4-4v2H8V6h8zm-2 10h-4c-1.1 0-2-.9-2-2h8c0 1.1-.9 2-2 2zm6-4c0 1.1-.9 2-2 2h-1V9h3v3zM4 12v-2h2v3c-1.1 0-2-.9-2-1z"/>
+                  <circle cx="12" cy="4" r="1.5"/>
+                </svg>
+              </div>
+
+              <h3 class="font-headline text-2xl font-bold text-on-surface lang-translatable" data-en="Regional Indian Chai Kettle" data-pl="Tradycyjny KocioÅ‚ek Indyjskiego Chai">Regional Indian Chai Kettle</h3>
+              <span class="h-px flex-1 bg-outline-variant/60 ml-3"></span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5" data-reveal-group="stagger">
+              <!-- Chai 1: House Masala Chai -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-1.webp" alt="House Masala Chai" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Warming Spices" data-pl="ÅšwieÅ¼y Imbir">Warming Spices</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">House Masala Chai</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Street Classic" data-pl="Domowy Klasyk">Street Classic</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Steeped with hand-crushed fresh ginger, green cardamom pods, cloves, black pepper, and whole cinnamon bark." data-pl="Czarna herbata liÅ›ciasta gotowana z mlekiem, Å›wieÅ¼o tÅ‚uczonym imbirem, kardamonem, goÅºdzikami i cynamonem.">Steeped with hand-crushed fresh ginger, green cardamom pods, cloves, black pepper, and whole cinnamon bark.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Crushed Spices" data-pl="ÅšwieÅ¼e Przyprawy">Crushed Spices</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20House%20Masala%20Chai." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chai 2: Kolkata Clay Pot Adrak -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-2.webp" alt="Kolkata Clay Pot Adrak" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Fresh Ginger" data-pl="Mocny Imbir">Fresh Ginger</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Kolkata Clay Pot Adrak</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-medium lang-translatable" data-en="Fresh Ginger" data-pl="Mocny Imbir">Mocny Imbir</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Fiery, soothing ginger kick brewed with premium Assam CTC tea leaves. Earthy, soothing, and restorative." data-pl="Wyrazisty imbirowy napar z mocnej herbaty liÅ›ciastej Assam CTC. KojÄ…cy, gÅ‚Ä™boki i rozgrzewajÄ…cy.">Fiery, soothing ginger kick brewed with premium Assam CTC tea leaves. Earthy, soothing, and restorative.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Kruszony Imbir" data-pl="Kruszony Imbir">Kruszony Imbir</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Kolkata%20Clay%20Pot%20Adrak." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chai 3: Kashmiri Kahwa -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-3.webp" alt="Kashmiri Kahwa" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-secondary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Saffron Green Tea" data-pl="Zielona z Szafranem">Zielona z Szafranem</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Kashmiri Kahwa</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-bold lang-translatable" data-en="Saffron Green Tea" data-pl="Zielona z Szafranem">Zielona z Szafranem</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Royal green tea from Kashmir steeped with pure saffron threads, cardamom, cinnamon, and sliced almonds." data-pl="KrÃ³lewska zielona herbata z doliny Kaszmiru z nitkami szafranu, kardamonem, cynamonem i migdaÅ‚ami.">Royal green tea from Kashmir steeped with pure saffron threads, cardamom, cinnamon, and sliced almonds.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-secondary font-medium lang-translatable" data-en="Saffron &amp; Almonds" data-pl="Szafran &amp; MigdaÅ‚y">Saffron &amp; Almonds</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Kashmiri%20Kahwa." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chai 4: Iced Mango Chai -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-4.webp" alt="Iced Mango Chai" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Refreshing" data-pl="MroÅ¼ona">Refreshing</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Iced Mango Chai</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Refreshing" data-pl="MroÅ¼ona">Refreshing</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Alphonso mango nectar shaken with slow-brewed black cardamom tea and cold milk over ice." data-pl="Mus z mango Alphonso wstrzÄ…Å›niÄ™ty z parzonÄ… czarnÄ… herbatÄ… kardamonowÄ… i zimnym mlekiem.">Alphonso mango nectar shaken with slow-brewed black cardamom tea and cold milk over ice.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Chilled Mango" data-pl="Mango z Lodem">Chilled Mango</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Iced%20Mango%20Chai." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chai 5: Noon Chai (Kashmiri Pink Tea) -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-5.webp" alt="Noon Chai (Kashmiri Pink Tea)" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-secondary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Salted Pink Tea" data-pl="RÃ³Å¼owa z SolÄ…">Salted Pink Tea</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Noon Chai (Kashmiri Pink Tea)</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-bold lang-translatable" data-en="Salted Pink Tea" data-pl="RÃ³Å¼owa z SolÄ…">Salted Pink Tea</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Legendary Himalayan pink tea boiled with milk, crushed cardamom, and a pinch of natural sea salt." data-pl="Himalajski specjaÅ‚ o naturalnie rÃ³Å¼owej barwie, parzony z mlekiem, kardamonem i szczyptÄ… soli.">Legendary Himalayan pink tea boiled with milk, crushed cardamom, and a pinch of natural sea salt.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-secondary font-medium lang-translatable" data-en="Delicate &amp; Salted" data-pl="Wytrawna &amp; RÃ³Å¼owa">Delicate &amp; Salted</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Noon%20Chai." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chai 6: Ayurvedic Herbal Infusion -->
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-6.webp" alt="Ayurvedic Herbal Infusion" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Caffeine-Free" data-pl="Bez Kofeiny">Caffeine-Free</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ayurvedic Herbal Infusion</h4>
+                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Caffeine-Free" data-pl="Bez Kofeiny">Bez Kofeiny</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Restorative herbal blend of sacred Tulsi (Holy Basil), warming ginger root, and naturally sweet licorice." data-pl="Ajurwedyjska kompozycja Å›wiÄ™tej bazylii Tulsi, rozgrzewajÄ…cego imbiru i sÅ‚odkiego korzenia lukrecji.">Restorative herbal blend of sacred Tulsi (Holy Basil), warming ginger root, and naturally sweet licorice.</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Tulsi &amp; Licorice" data-pl="Tulsi &amp; Lukrecja">Tulsi &amp; Licorice</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Ayurvedic%20Herbal%20Infusion." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="ZamÃ³w na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">â†’</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PUNKT KSERO & PRINT STATION (SERVICE SPECS - NO PRICES) -->
+      <section class="w-full bg-surface-container-low py-16 border-y border-outline-variant/60" id="ksero-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Left: Context & Instructions (5 Cols) -->
+            <div class="lg:col-span-5 flex flex-col justify-between" data-reveal="fade-up">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-xs font-bold uppercase tracking-wider mb-4 border border-primary/30 lang-translatable" data-en="Student Desk â€¢ Punkt Ksero" data-pl="Punkt Ksero â€¢ Dla StudentÃ³w">
+                  <span class="material-symbols-outlined text-[14px]">print</span>
+                  Student Desk â€¢ Punkt Ksero
+                </div>
+                <h2 class="font-headline text-3xl sm:text-4xl text-on-surface font-bold mb-4 lang-translatable" data-en="Fast, Reliable Printing Without the University Line." data-pl="Szybki, Pewny Druk Bez Uniwersyteckich Kolejek.">
+                  Fast, Reliable Printing Without the University Line.
+                </h2>
+                <p class="font-body text-sm sm:text-base text-on-surface-variant mb-8 leading-relaxed lang-translatable" data-en="Why queue in the university basement? At El Shaddai, send your documents ahead of time and grab your stapled report along with your hot morning kaapi." data-pl="Po co staÄ‡ w kilometrowych kolejkach na wydziale? PrzeÅ›lij pliki w drodze na uczelniÄ™ przez WhatsApp lub e-mail â€” odbierz gotowe arkusze, pijÄ…c Å›wieÅ¼y Chai.">
+                  Why queue in the university basement? At El Shaddai, send your documents ahead of time and grab your stapled report along with your hot morning kaapi.
+                </p>
+
+                <!-- How To Steps -->
+                <div class="space-y-4 mb-8">
+                  <div class="flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-primary text-surface-container-lowest flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</span>
+                    <div>
+                      <p class="font-headline text-base font-bold text-on-surface lang-translatable" data-en="Send your file (PDF / DOCX)" data-pl="WyÅ›lij plik online (PDF)">Send your file (PDF / DOCX)</p>
+                      <p class="font-body text-xs text-on-surface-variant mt-0.5 lang-translatable" data-en="Send to WhatsApp +48 516 699 313 or email elshaddaipunks@gmail.com" data-pl="PrzeÅ›lij na nasz WhatsApp +48 516 699 313 lub e-mail: elshaddaipunks@gmail.com">Send to WhatsApp <a class="font-bold text-primary underline" href="https://wa.me/48516699313">+48 516 699 313</a> or email <code class="bg-surface-container-highest px-1.5 py-0.5 rounded text-xs select-all text-on-surface font-mono border border-outline-variant/60">elshaddaipunks@gmail.com</code></p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-primary text-surface-container-lowest flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</span>
+                    <div>
+                      <p class="font-headline text-base font-bold text-on-surface lang-translatable" data-en="Specify Printing Specs" data-pl="OkreÅ›l parametry wydruku">Specify Printing Specs</p>
+                      <p class="font-body text-xs text-on-surface-variant mt-0.5 lang-translatable" data-en="B/W or Color, double-sided, and paper quality for your submission." data-pl="Kolor lub czarno-biaÅ‚y, jednostronnie/dwustronnie, oraz rodzaj papieru.">B/W or Color, double-sided, and paper quality for your submission.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-primary text-surface-container-lowest flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</span>
+                    <div>
+                      <p class="font-headline text-base font-bold text-on-surface lang-translatable" data-en="Pick up in 3 minutes" data-pl="Odbierz w 3 minuty przy barze">Pick up in 3 minutes</p>
+                      <p class="font-body text-xs text-on-surface-variant mt-0.5 lang-translatable" data-en="Walk over to ul. JagielloÅ„ska 22. Your pages are sorted, stapled, and warm." data-pl="PodejdÅº na ul. JagielloÅ„skÄ… 22. Twoje dokumenty czekajÄ… gotowe, posortowane i ciepÅ‚e.">Walk over to ul. JagielloÅ„ska 22. Your pages are sorted, stapled, and warm.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick CTAs Box -->
+              <div class="p-5 rounded-2xl bg-surface-container-high border border-outline-variant shadow-md flex flex-col gap-3">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="material-symbols-outlined text-primary text-2xl">send</span>
+                  <span class="font-headline text-base font-bold text-on-surface lang-translatable" data-en="Instant File Drop &amp; Spec Guide" data-pl="Szybka WysyÅ‚ka &amp; Poradnik">Instant File Drop &amp; Spec Guide</span>
+                </div>
+                <p class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Send your attachments directly to our print desk for immediate processing or inquiry." data-pl="PrzeÅ›lij pliki bezpoÅ›rednio na WhatsApp punktu druku w celu natychmiastowej realizacji.">Send your attachments directly to our print desk for immediate processing or inquiry.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                  <a class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-primary hover:bg-secondary text-surface-container-lowest text-xs font-bold shadow-md transition-colors" href="https://wa.me/48516699313?text=Hello%20El%20Shaddai%2C%20I%20have%20a%20document%20to%20print%3A" rel="noopener noreferrer" target="_blank">
+                    <span class="material-symbols-outlined text-[16px]">chat</span>
+                    <span class="lang-translatable" data-en="Send on WhatsApp" data-pl="WyÅ›lij na WhatsApp">Send on WhatsApp</span>
+                  </a>
+                  <button id="guide-open" class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-highest text-on-surface font-semibold text-xs border border-outline-variant transition-colors">
+                    <span class="material-symbols-outlined text-[16px] text-primary">menu_book</span>
+                    <span class="lang-translatable" data-en="Service Guide" data-pl="Poradnik Druku">Service Guide</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Service & Specification Matrix (NO PRICES) -->
+            <div class="lg:col-span-7" data-reveal="fade-up">
+              <div class="rounded-2xl bg-surface-container-high border border-outline-variant shadow-md overflow-hidden p-6 sm:p-7">
+                
+                <div class="flex items-center justify-between pb-5 mb-5 border-b border-outline-variant/60">
+                  <div>
+                    <h3 class="font-headline text-xl sm:text-2xl font-bold text-on-surface lang-translatable" data-en="Student Ksero Service Matrix" data-pl="Katalog UsÅ‚ug Punktu Ksero">Student Ksero Service Matrix</h3>
+                    <p class="font-body text-xs text-on-surface-variant mt-0.5 lang-translatable" data-en="Send documents ahead of time for instant counter pickup." data-pl="PrzeÅ›lij pliki online i odbierz bez kolejki przy barze.">Send documents ahead of time for instant counter pickup.</p>
+                  </div>
+                  <span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-bold text-xs border border-primary/30 lang-translatable" data-en="Official Student Desk" data-pl="Punkt Akademicki">Official Student Desk</span>
+                </div>
+
+                <!-- Service Specifications Matrix with Stagger -->
+                <div class="space-y-3" data-reveal-group="stagger">
+                  <!-- Item 1 -->
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-colors border border-outline-variant/60 gap-3" data-reveal-item>
+                    <div class="flex items-center gap-3">
+                      <span class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-xs border border-outline-variant/50 shrink-0">A4</span>
+                      <div>
+                        <span class="font-headline text-base font-bold text-on-surface block leading-snug lang-translatable" data-en="Black &amp; White Printing / Ksero" data-pl="Druk Laserowy &amp; Ksero Czarno-BiaÅ‚e">Black &amp; White Printing / Ksero</span>
+                        <span class="font-body text-xs text-on-surface-variant lang-translatable" data-en="80g Premium Navigator paper â€¢ Laser sharp single &amp; double-sided" data-pl="Papier 80g Navigator â€¢ Ostry laser monochromatyczny 1200 DPI">80g Premium Navigator paper â€¢ Laser sharp single &amp; double-sided</span>
+                      </div>
+                    </div>
+                    <a href="https://wa.me/48516699313?text=Hi!%20I%20need%20Black%20%26%20White%20A4%20printing." target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-bold flex items-center gap-1 self-end sm:self-center shrink-0 hover:underline lang-translatable" data-en="Inquire / Send â†’" data-pl="WyÅ›lij Plik â†’">
+                      Inquire / Send â†’
+                    </a>
+                  </div>
+
+                  <!-- Item 2 -->
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-colors border border-outline-variant/60 gap-3" data-reveal-item>
+                    <div class="flex items-center gap-3">
+                      <span class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs border border-primary/30 shrink-0">RGB</span>
+                      <div>
+                        <span class="font-headline text-base font-bold text-on-surface block leading-snug lang-translatable" data-en="High-Definition Full Color Printing" data-pl="Druk Kolorowy Wysokiej RozdzielczoÅ›ci">High-Definition Full Color Printing</span>
+                        <span class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Presentations, charts, diagrams &amp; portfolio posters (A4 / A3)" data-pl="Prezentacje, wykresy, plansze architektoniczne i plakaty (A4 / A3)">Presentations, charts, diagrams &amp; portfolio posters (A4 / A3)</span>
+                      </div>
+                    </div>
+                    <a href="https://wa.me/48516699313?text=Hi!%20I%20need%20full%20colour%20printing." target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-bold flex items-center gap-1 self-end sm:self-center shrink-0 hover:underline lang-translatable" data-en="Inquire / Send â†’" data-pl="WyÅ›lij Plik â†’">
+                      Inquire / Send â†’
+                    </a>
+                  </div>
+
+                  <!-- Item 3 -->
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-colors border border-outline-variant/60 gap-3" data-reveal-item>
+                    <div class="flex items-center gap-3">
+                      <span class="w-9 h-9 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center font-bold text-xs border border-outline-variant/50 shrink-0">ðŸŽ“</span>
+                      <div>
+                        <span class="font-headline text-base font-bold text-on-surface block leading-snug lang-translatable" data-en="Fast Academic Printing" data-pl="Profesjonalne Drukowanie DokumentÃ³w">Fast Academic Printing</span>
+                        <span class="font-body text-xs text-on-surface-variant lang-translatable" data-en="High-quality A4 & A3 printing direct from your email or pendrive" data-pl="Oprawa twarda z tÅ‚oczeniem UÅš (granat, bordeaux, czarny) w 10 min">High-quality A4 & A3 printing direct from your email or pendrive</span>
+                      </div>
+                    </div>
+                    <a href="https://wa.me/48516699313?text=Hi!%20I%20need%20printing%20services." target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-bold flex items-center gap-1 self-end sm:self-center shrink-0 hover:underline lang-translatable" data-en="Print Desk â†’" data-pl="Drukowanie â†’">
+                      Print Desk â†’
+                    </a>
+                  </div>
+
+                  <!-- Item 4 -->
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-colors border border-outline-variant/60 gap-3" data-reveal-item>
+                    <div class="flex items-center gap-3">
+                      <span class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-xs border border-outline-variant/50 shrink-0">PDF</span>
+                      <div>
+                        <span class="font-headline text-base font-bold text-on-surface block leading-snug lang-translatable" data-en="Black & White Document Printing" data-pl="Drukowanie Wielostronicowe HD">Black & White Document Printing</span>
+                        <span class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Direct to email or USB pendrive â€¢ High-speed ADF feeder" data-pl="BezpoÅ›rednio na e-mail / WhatsApp / USB â€¢ Podajnik dwustronny">Direct to email or USB pendrive â€¢ High-speed ADF feeder</span>
+                      </div>
+                    </div>
+                    <a href="https://wa.me/48516699313?text=Hi!%20I%20need%20document%20printing." target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-bold flex items-center gap-1 self-end sm:self-center shrink-0 hover:underline lang-translatable" data-en="Print Inquiry â†’" data-pl="Drukowanie â†’">
+                      Print Inquiry â†’
+                    </a>
+                  </div>
+
+                  <!-- Item 5 -->
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-colors border border-outline-variant/60 gap-3" data-reveal-item>
+                    <div class="flex items-center gap-3">
+                      <span class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-xs border border-outline-variant/50 shrink-0">LAM</span>
+                      <div>
+                        <span class="font-headline text-base font-bold text-on-surface block leading-snug lang-translatable" data-en="Thermal Gloss Lamination" data-pl="Laminowanie / Foliowanie Ochronne">Thermal Gloss Lamination</span>
+                        <span class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Water-resistant gloss protection for official certificates, notices &amp; IDs" data-pl="BÅ‚yszczÄ…ca folia ochronna na certyfikaty, legitymacje i dokumenty">Water-resistant gloss protection for official certificates, notices &amp; IDs</span>
+                      </div>
+                    </div>
+                    <a href="https://wa.me/48516699313?text=Hi!%20I%20need%20lamination%20services." target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-bold flex items-center gap-1 self-end sm:self-center shrink-0 hover:underline lang-translatable" data-en="Lamination â†’" data-pl="Laminowanie â†’">
+                      Lamination â†’
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Email Submission Banner -->
+                <div class="mt-5 p-4 rounded-xl bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-3 border border-outline-variant/60">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-xl">mark_email_read</span>
+                    <span class="font-body text-xs text-on-surface lang-translatable" data-en="Submit files by email: elshaddaipunks@gmail.com" data-pl="PrzeÅ›lij pliki na e-mail: elshaddaipunks@gmail.com">Submit files by email: <strong class="font-mono text-primary select-all">elshaddaipunks@gmail.com</strong></span>
+                  </div>
+                  <button id="copy-email-btn" class="text-xs px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-primary hover:text-surface-container-lowest transition-colors font-bold border border-outline-variant text-on-surface lang-translatable" data-en="Copy Email" data-pl="Skopiuj E-mail" onclick="copyEmail()">
+                    Copy Email
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- UNIVERSITY PROXIMITY & INTERACTIVE LOCATION HUB -->
+      <section class="w-full bg-surface py-16" id="location-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          
+          <!-- Section Header -->
+          <div class="max-w-2xl mb-10" data-reveal="fade-up">
+            <span class="text-xs uppercase tracking-widest text-primary font-bold lang-translatable" data-en="Heart of Student Katowice" data-pl="Centrum Akademickich Katowic">Heart of Student Katowice</span>
+            <h2 class="font-headline text-3xl sm:text-4xl text-on-surface font-bold mt-1 lang-translatable" data-en="Right where you study, meet, and commute." data-pl="TuÅ¼ obok Twoich wykÅ‚adÃ³w, spotkaÅ„ i dworca.">
+              Right where you study, meet, and commute.
+            </h2>
+            <p class="font-body text-base text-on-surface-variant mt-2 lang-translatable" data-en="Located at ul. JagielloÅ„ska 22, we are positioned directly on the pedestrian corridor between student halls, faculties, and the central train station." data-pl="MieÅ›cimy siÄ™ przy ul. JagielloÅ„skiej 22, dokÅ‚adnie na trasie pieszej miÄ™dzy wydziaÅ‚ami Uniwersytetu ÅšlÄ…skiego, a Dworcem GÅ‚Ã³wnym PKP.">
+              Located at <strong class="text-primary font-bold">ul. JagielloÅ„ska 22</strong>, we are positioned directly on the pedestrian corridor between student halls, faculties, and the central train station.
+            </p>
+          </div>
+
+          <!-- Distance Indicators Strip with Stagger -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8" data-reveal-group="stagger">
+            <div class="p-5 rounded-2xl bg-surface-container-high border border-outline-variant shadow-sm flex items-center gap-4" data-reveal-item>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary border border-outline-variant/60 flex items-center justify-center text-2xl font-bold">
+                ðŸš¶
+              </div>
+              <div>
+                <div class="font-headline text-lg font-bold text-on-surface lang-translatable" data-en="3 min walk" data-pl="3 minuty pieszo">3 min walk</div>
+                <div class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Uniwersytet ÅšlÄ…ski (Rectorate &amp; Humanities)" data-pl="Uniwersytet ÅšlÄ…ski (Rektorat &amp; WydziaÅ‚y)">Uniwersytet ÅšlÄ…ski (Rectorate &amp; Humanities)</div>
+              </div>
+            </div>
+            <div class="p-5 rounded-2xl bg-surface-container-high border border-outline-variant shadow-sm flex items-center gap-4" data-reveal-item>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-secondary border border-outline-variant/60 flex items-center justify-center text-2xl font-bold">
+                ðŸ›ï¸
+              </div>
+              <div>
+                <div class="font-headline text-lg font-bold text-on-surface lang-translatable" data-en="5 min walk" data-pl="5 minut pieszo">5 min walk</div>
+                <div class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Katowice Rynek (Central City Square)" data-pl="Rynek w Katowicach / Teatr ÅšlÄ…ski">Katowice Rynek (Central City Square)</div>
+              </div>
+            </div>
+            <div class="p-5 rounded-2xl bg-surface-container-high border border-outline-variant shadow-sm flex items-center gap-4" data-reveal-item>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary border border-outline-variant/60 flex items-center justify-center text-2xl font-bold">
+                ðŸš†
+              </div>
+              <div>
+                <div class="font-headline text-lg font-bold text-on-surface lang-translatable" data-en="7 min walk" data-pl="7 minut pieszo">7 min walk</div>
+                <div class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Katowice Dworzec GÅ‚Ã³wny PKP" data-pl="Dworzec GÅ‚Ã³wny PKP / Galeria Katowicka">Katowice Dworzec GÅ‚Ã³wny PKP</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Split Map & Operational Box -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5" data-reveal="scale-up">
+            
+            <!-- Map Card (8 Cols) -->
+            <div class="lg:col-span-8 rounded-2xl overflow-hidden shadow-md relative min-h-[400px] bg-surface-container-high border border-outline-variant flex flex-col justify-end p-5">
+              <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('./assets/katowice.webp')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/40 to-transparent"></div>
+              
+              <!-- Bottom Card on Map -->
+              <div class="relative z-10 p-4 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-outline-variant">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                    <span class="font-headline text-base font-bold text-on-surface">ul. JagielloÅ„ska 22, Katowice</span>
+                  </div>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">GPS: 50.2543453Â° N, 19.0225130Â° E â€¢ 40-035 Katowice, Poland</p>
+                </div>
+                <a class="px-4 py-2 rounded-lg bg-primary hover:bg-secondary text-surface-container-lowest font-bold text-xs shadow-md transition-colors flex items-center gap-1.5 shrink-0" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jagiello%C5%84ska+22%2C+Katowice" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[16px]">navigation</span>
+                  <span class="lang-translatable" data-en="Open in Google Maps" data-pl="OtwÃ³rz TrasÄ™ w Mapach">Open in Google Maps</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Working Hours & Direct Desk (4 Cols) -->
+            <div class="lg:col-span-4 rounded-2xl bg-surface-container-high p-6 shadow-md border border-outline-variant flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-5">
+                  <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                  <h3 class="font-headline text-2xl font-bold text-on-surface lang-translatable" data-en="Hours of Service" data-pl="Godziny Otwarcia">Hours of Service</h3>
+                </div>
+                <div class="space-y-3 font-body text-sm text-on-surface mb-6">
+                  <div class="flex justify-between items-center py-2 border-b border-outline-variant/60">
+                    <span class="text-on-surface-variant font-medium lang-translatable" data-en="Monday â€“ Friday" data-pl="PoniedziaÅ‚ek â€“ PiÄ…tek">Monday â€“ Friday</span>
+                    <span class="font-bold text-on-surface">07:30 â€“ 19:30</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-outline-variant/60">
+                    <span class="text-on-surface-variant font-medium lang-translatable" data-en="Saturday" data-pl="Sobota">Saturday</span>
+                    <span class="font-bold text-on-surface">09:00 â€“ 18:00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-outline-variant/60">
+                    <span class="text-on-surface-variant font-medium lang-translatable" data-en="Sunday" data-pl="Niedziela">Sunday</span>
+                    <span class="font-bold text-primary">10:00 â€“ 17:00</span>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/60 text-xs text-on-surface-variant space-y-1">
+                  <div class="flex items-center gap-1 font-bold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-[16px]">wifi</span>
+                    <span class="lang-translatable" data-en="High-Speed Fiber Wi-Fi" data-pl="Szybki ÅšwiatÅ‚owÃ³d Wi-Fi">High-Speed Fiber Wi-Fi</span>
+                  </div>
+                  <p class="lang-translatable" data-en="Free unmetered connection for all guests. Plugs available under bench seats and central wooden desks." data-pl="BezpÅ‚atne Å‚Ä…cze dla wszystkich goÅ›ci. Gniazdka pod Å‚awkami i przy stolikach do nauki.">Free unmetered connection for all guests. Plugs available under bench seats and central wooden desks.</p>
+                </div>
+              </div>
+              <div class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center justify-between">
+                <span class="font-body text-xs text-on-surface-variant lang-translatable" data-en="Planning a visit?" data-pl="Masz pytanie?">Planning a visit?</span>
+                <a class="font-body text-xs font-bold text-primary hover:text-secondary transition-colors flex items-center gap-1" href="tel:+48507700193">
+                  <span class="material-symbols-outlined text-[16px]">call</span> +48 507 700 193
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- VERIFIED GOOGLE BUSINESS & AUTHENTIC REVIEWS -->
+      <section class="w-full bg-surface-container-low py-16 border-t border-outline-variant/60" id="reviews-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          
+          <!-- Top Header -->
+          <div class="text-center max-w-2xl mx-auto mb-10" data-reveal="fade-up">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-high border border-outline-variant text-xs font-bold text-primary uppercase tracking-wider mb-3">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span class="lang-translatable" data-en="Google Maps Verified Profile" data-pl="Zweryfikowany Profil Google Maps">Google Maps Verified Profile</span>
+            </div>
+            <h2 class="font-headline text-3xl sm:text-4xl text-on-surface font-bold lang-translatable" data-en="Real Guest Experiences at ul. JagielloÅ„ska 22" data-pl="Prawdziwe Opinie GoÅ›ci przy ul. JagielloÅ„skiej 22">Real Guest Experiences at ul. JagielloÅ„ska 22</h2>
+            <p class="font-body text-sm text-on-surface-variant mt-2 lang-translatable" data-en="Authentic, unedited feedback from Google Maps reviewers visiting our Katowice cafe and student print desk." data-pl="Prawdziwe, nieedytowane opinie goÅ›ci z Google Maps odwiedzajÄ…cych naszÄ… katowickÄ… kawiarniÄ™ i punkt ksero.">Authentic, unedited feedback from Google Maps reviewers visiting our Katowice cafe and student print desk.</p>
+          </div>
+
+          <!-- Official Google Business Badge Card -->
+          <div class="max-w-3xl mx-auto mb-10 p-6 rounded-2xl bg-surface-container-high border border-outline-variant shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6" data-reveal="scale-up">
+            <div class="flex items-center gap-4 text-center sm:text-left">
+              <!-- Google "G" Badge -->
+              <div class="w-14 h-14 rounded-2xl bg-surface-container-lowest border border-outline-variant flex items-center justify-center shrink-0 shadow-inner">
+                <svg class="w-8 h-8" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="flex items-center justify-center sm:justify-start gap-2">
+                  <span class="font-headline text-3xl font-bold text-on-surface">4.9</span>
+                  <div class="flex text-[#ffb84d] text-lg">â˜…â˜…â˜…â˜…â˜…</div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    <span class="lang-translatable" data-en="Verified" data-pl="Zweryfikowano">Verified</span>
+                  </span>
+                </div>
+                <p class="font-headline text-base font-bold text-on-surface mt-0.5">El Shaddai Indian Cafe &amp; Punkt Ksero</p>
+                <p class="font-body text-xs text-on-surface-variant">ul. JagielloÅ„ska 22, 40-035 Katowice</p>
+              </div>
+            </div>
+
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=El+Shaddai+Cafe+Katowice" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-secondary text-surface-container-lowest text-xs font-bold shadow-md transition-all shrink-0">
+              <span class="lang-translatable" data-en="Open Google Maps Profile" data-pl="OtwÃ³rz Profil na Mapach Google">Open Google Maps Profile</span>
+              <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+            </a>
+          </div>
+
+          <!-- Two Authentic Google Customer Reviews -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10" data-reveal-group="stagger">
+            
+            <!-- Authentic Review 1 -->
+            <div class="p-6 rounded-2xl bg-surface-container-high shadow-md hover:shadow-xl border border-outline-variant transition-all flex flex-col justify-between group" data-reveal-item>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex text-[#ffb84d] text-base">â˜…â˜…â˜…â˜…â˜…</div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-primary bg-surface-container-lowest px-2.5 py-0.5 rounded-full border border-outline-variant">
+                    <svg class="w-3 h-3 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span class="lang-translatable" data-en="Verified Google Review" data-pl="Zweryfikowana Opinia Google">Verified Google Review</span>
+                  </span>
+                </div>
+                <blockquote class="font-body text-sm sm:text-base text-on-surface leading-relaxed italic mb-6 lang-translatable" data-en="â€œI really like this place. very cute and cozy atmosphere. love the service.highly recommend this place.ðŸ¥°ðŸ¥°â€" data-pl="â€žNaprawdÄ™ uwielbiam to miejsce. Bardzo urocza i przytulna atmosfera. WspaniaÅ‚a obsÅ‚uga. GorÄ…co polecam to miejsce!ðŸ¥°ðŸ¥°â€">
+                  â€œI really like this place. very cute and cozy atmosphere. love the service.highly recommend this place.ðŸ¥°ðŸ¥°â€
+                </blockquote>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-outline-variant/60">
+                <div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs border border-primary/30 shadow-inner">
+                  ES
+                </div>
+                <div>
+                  <span class="font-headline text-sm font-bold text-on-surface block leading-tight lang-translatable" data-en="Guest at ul. JagielloÅ„ska" data-pl="GoÅ›Ä‡ przy ul. JagielloÅ„skiej">Guest at ul. JagielloÅ„ska</span>
+                  <span class="font-body text-[11px] text-on-surface-variant lang-translatable" data-en="Posted on Google Maps" data-pl="Opublikowano w Google Maps">Posted on Google Maps</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authentic Review 2 -->
+            <div class="p-6 rounded-2xl bg-surface-container-high shadow-md hover:shadow-xl border border-outline-variant transition-all flex flex-col justify-between group" data-reveal-item>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex text-[#ffb84d] text-base">â˜…â˜…â˜…â˜…â˜…</div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-primary bg-surface-container-lowest px-2.5 py-0.5 rounded-full border border-outline-variant">
+                    <svg class="w-3 h-3 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span class="lang-translatable" data-en="Verified Google Review" data-pl="Zweryfikowana Opinia Google">Verified Google Review</span>
+                  </span>
+                </div>
+                <blockquote class="font-body text-sm sm:text-base text-on-surface leading-relaxed italic mb-6 lang-translatable" data-en="â€œExcellent Indian cafe with great coffee, and very friendly service. Cozy atmosphere and reasonable prices. One of the best places to visit in Katowice. Highly recommended!â€" data-pl="â€žZnakomita indyjska kawiarnia ze Å›wietnÄ… kawÄ… i bardzo przyjaznÄ… obsÅ‚ugÄ…. Przytulna atmosfera i przystÄ™pne ceny. Jedno z najlepszych miejsc do odwiedzenia w Katowicach. GorÄ…co polecam!â€">
+                  â€œExcellent Indian cafe with great coffee, and very friendly service. Cozy atmosphere and reasonable prices. One of the best places to visit in Katowice. Highly recommended!â€
+                </blockquote>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-outline-variant/60">
+                <div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs border border-secondary/30 shadow-inner">
+                  LG
+                </div>
+                <div>
+                  <span class="font-headline text-sm font-bold text-on-surface block leading-tight lang-translatable" data-en="Local Guide â€¢ Katowice" data-pl="Lokalny Przewodnik â€¢ Katowice">Local Guide â€¢ Katowice</span>
+                  <span class="font-body text-[11px] text-on-surface-variant lang-translatable" data-en="Posted on Google Maps" data-pl="Opublikowano w Google Maps">Posted on Google Maps</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Leave a Review CTA Box -->
+          <div class="max-w-xl mx-auto text-center mb-10">
+            <p class="font-body text-xs text-on-surface-variant mb-3 lang-translatable" data-en="Visited us for Madras Kaapi, hot Chai, or express printing? Share your experience with the Katowice community." data-pl="OdwiedziÅ‚eÅ› nas na kawÄ™ Kaapi, gorÄ…cy Chai lub ekspresowy druk? Podziel siÄ™ swojÄ… opiniÄ… na Mapach Google.">
+              Visited us for Madras Kaapi, hot Chai, or express printing? Share your experience with the Katowice community.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=El+Shaddai+Cafe+Katowice" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary font-bold underline underline-offset-4">
+              <span class="lang-translatable" data-en="Write a review on Google Maps" data-pl="Dodaj opiniÄ™ na Mapach Google">Write a review on Google Maps</span>
+              <span class="material-symbols-outlined text-[15px]">rate_review</span>
+            </a>
+          </div>
+
+          <!-- Social & Direct Channels Row -->
+          <div class="p-6 rounded-2xl bg-surface-container-high border border-outline-variant shadow-md" data-reveal="fade-up">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+              <div>
+                <h3 class="font-headline text-xl font-bold text-on-surface lang-translatable" data-en="Connect With El Shaddai Directly" data-pl="BezpoÅ›redni Kontakt z Nami">Connect With El Shaddai Directly</h3>
+                <p class="font-body text-xs text-on-surface-variant mt-0.5 lang-translatable" data-en="Follow daily brew specials, academic printing announcements &amp; collegiate updates." data-pl="ÅšledÅº aktualnoÅ›ci kawiarni, komunikaty dla studentÃ³w i godziny pracy.">Follow daily brew specials, academic printing announcements &amp; collegiate updates.</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-2.5">
+                <a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary-container text-on-primary-container hover:bg-primary hover:text-surface-container-lowest text-xs font-bold transition-colors border border-primary/30" href="https://wa.me/48516699313" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[16px]">chat</span>
+                  <span>WhatsApp (+48 516 699 313)</span>
+                </a>
+                <a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface text-xs font-semibold transition-colors border border-outline-variant" href="tel:+48507700193">
+                  <span class="material-symbols-outlined text-[16px] text-primary">phone</span>
+                  <span class="lang-translatable" data-en="Call (+48 507 700 193)" data-pl="Telefon (+48 507 700 193)">Call (+48 507 700 193)</span>
+                </a>
+                <a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-primary hover:text-surface-container-lowest text-on-surface text-xs font-semibold transition-colors border border-outline-variant" href="https://www.facebook.com/profile.php/?id=61593598552039" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[16px]">public</span>
+                  <span>Facebook</span>
+                </a>
+                <a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-primary hover:text-surface-container-lowest text-on-surface text-xs font-semibold transition-colors border border-outline-variant" href="https://www.youtube.com/@ElShaddaiCafePunktKsero" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[16px]">smart_display</span>
+                  <span>YouTube</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BOTTOM PERSISTENT PRE-ORDER / SEND-TO-PRINT BANNER -->
+      <section class="w-full bg-surface-container-highest border-t border-outline-variant py-12 relative overflow-hidden" data-reveal="fade-up">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="space-y-2.5 text-center lg:text-left">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-xs font-bold uppercase tracking-wider border border-primary/30 lang-translatable" data-en="âš¡ Quick Send-to-Print &amp; Pre-Order Desk" data-pl="âš¡ Szybka WysyÅ‚ka do Druku &amp; ZamÃ³wienia">
+                âš¡ Quick Send-to-Print &amp; Pre-Order Desk
+              </div>
+              <h2 class="font-headline text-3xl sm:text-4xl text-on-surface font-bold max-w-xl lang-translatable" data-en="Got an essay due or craving authentic chai right now?" data-pl="Goni CiÄ™ termin zaliczenia czy masz ochotÄ™ na gorÄ…cy Chai?">
+                Got an essay due or craving authentic chai right now?
+              </h2>
+              <p class="font-body text-sm text-on-surface-variant max-w-lg lang-translatable" data-en="Message us directly on WhatsApp. Drop your document attachment or order your frothy Madras Kaapi to skip the counter queue." data-pl="Napisz do nas bezpoÅ›rednio na WhatsApp. PrzeÅ›lij zaÅ‚Ä…cznik z plikiem lub zamÃ³w aromatycznÄ… kawÄ™ Kaapi, by odebraÄ‡ bez czekania.">
+                Message us directly on WhatsApp. Drop your document attachment or order your frothy Madras Kaapi to skip the counter queue.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center gap-3.5 shrink-0 w-full sm:w-auto">
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-surface-container-lowest font-bold text-sm hover:bg-secondary transition-all shadow-lg transform hover:-translate-y-0.5" href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20send%20a%20document%20to%20print%20%2F%20order%20a%20drink." rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>WhatsApp (+48 516 699 313)</span>
+              </a>
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-sm transition-colors border border-outline-variant shadow-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jagiello%C5%84ska+22%2C+Katowice" rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[18px] text-primary">directions</span>
+                <span class="lang-translatable" data-en="Navigate to ul. JagielloÅ„ska 22" data-pl="Nawiguj do ul. JagielloÅ„ska 22">Navigate to ul. JagielloÅ„ska 22</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- THE BARISTA PILL (CREATIVE SCROLL-TRIGGERED FLOATING DOCK) -->
+  <aside id="baristaDock" class="barista-dock" aria-label="Quick Actions Dock">
+    <div class="flex items-center gap-2.5 pr-1">
+      <span class="dock-pulse-dot" aria-hidden="true"></span>
+      <div class="flex flex-col leading-none">
+        <span class="text-xs font-bold text-[#f5ede3] tracking-wide">El Shaddai</span>
+        <span class="text-[10px] text-[#cfb8a7] hidden sm:inline lang-translatable" data-en="Katowice Â· Open" data-pl="Katowice Â· Otwarte">Katowice Â· Open</span>
+      </div>
+    </div>
+    
+    <div class="dock-divider" aria-hidden="true"></div>
+
+    <!-- WhatsApp Quick Send to Print -->
+    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai%2C%20I%20have%20a%20document%20to%20print" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary hover:bg-secondary text-surface-container-lowest text-xs font-bold transition-all shadow-md">
+      <span class="material-symbols-outlined text-[16px]">print</span>
+      <span class="lang-translatable" data-en="Send to Print" data-pl="Drukuj (WhatsApp)">Send to Print</span>
+    </a>
+
+    <!-- Quick Directions -->
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Jagiello%C5%84ska+22%2C+Katowice" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-semibold transition-colors border border-outline-variant">
+      <span class="material-symbols-outlined text-[15px] text-primary">near_me</span>
+      <span class="lang-translatable" data-en="Directions" data-pl="Dojazd">Directions</span>
+    </a>
+
+    <!-- Jump to Menu -->
+    <a href="#menu-section" class="w-7 h-7 rounded-full bg-surface-container hover:bg-surface-container-highest text-primary flex items-center justify-center border border-outline-variant" aria-label="Explore Menu">
+      <span class="material-symbols-outlined text-[16px]">local_cafe</span>
+    </a>
+
+    <!-- Dismiss Pill -->
+    <button type="button" class="text-[#8a6652] hover:text-[#f5ede3] p-1 transition-colors" id="dockDismissBtn" aria-label="Minimize quick dock">
+      <span class="material-symbols-outlined text-[16px]">close</span>
+    </button>
+  </aside>
+
+  <!-- Re-open Mini Trigger (if dismissed) -->
+  <button id="dockTriggerBtn" class="dock-mini-trigger" aria-label="Open quick actions" hidden>
+    <span class="dock-pulse-dot" aria-hidden="true"></span>
+    <span class="lang-translatable" data-en="Print &amp; Coffee" data-pl="Druk &amp; Kawa">Print &amp; Coffee</span>
+  </button>
+
+  <!-- PRINT GUIDE MODAL DIALOG -->
+  <dialog id="print-guide" class="p-0 rounded-2xl bg-surface-container-high text-on-surface border border-outline-variant shadow-2xl backdrop:bg-black/80 max-w-2xl w-[92vw] mx-auto my-auto">
+    <div class="p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-outline-variant/60">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-primary font-bold lang-translatable" data-en="Punkt Ksero" data-pl="Punkt Ksero">Punkt Ksero</span>
+          <h3 class="font-headline text-xl font-bold text-on-surface lang-translatable" data-en="Print &amp; Copy Specification Guide" data-pl="Poradnik Przygotowania PlikÃ³w do Druku">Print &amp; Copy Specification Guide</h3>
+        </div>
+        <button id="guide-close" class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center border border-outline-variant">âœ•</button>
+      </div>
+      <div class="py-4 space-y-4 max-h-[70vh] overflow-y-auto">
+        <p class="font-body text-xs text-on-surface-variant lang-translatable" data-en="A quick visual reference for paper sizes (A4, A3), black-and-white vs full colour printing, document printing formats, and printing options at ul. JagielloÅ„ska 22." data-pl="KrÃ³tki przewodnik po formatach (A4, A3), druku czarno-biaÅ‚ym i kolorowym, drukowaniu oraz opcjach druku przy ul. JagielloÅ„skiej 22.">A quick visual reference for paper sizes (A4, A3), black-and-white vs full colour printing, document printing formats, and printing options at ul. JagielloÅ„ska 22.</p>
+        <div class="rounded-xl overflow-hidden border border-outline-variant">
+          <img src="./assets/print-brown.webp" alt="Print and copy overview" class="w-full h-auto object-cover"/>
+        </div>
+        <details class="group rounded-xl bg-surface-container-lowest p-3.5 border border-outline-variant/60">
+          <summary class="font-headline text-sm font-bold text-primary cursor-pointer flex items-center justify-between">
+            <span class="lang-translatable" data-en="View Detailed Paper Formats &amp; Resolution Specs" data-pl="SzczegÃ³Å‚owa Specyfikacja FormatÃ³w i RozdzielczoÅ›ci">View Detailed Paper Formats &amp; Resolution Specs</span>
+            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="pt-3">
+            <img src="./assets/print-guide.webp" alt="Detailed print specs guide" class="w-full h-auto object-cover rounded-lg"/>
+          </div>
+        </details>
+      </div>
+      <div class="pt-4 border-t border-outline-variant/60 flex items-center justify-between gap-3">
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-surface-container-lowest font-bold text-xs" href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20have%20questions%20about%20printing%20specs." target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined text-[16px]">chat</span>
+          <span class="lang-translatable" data-en="Ask Print Desk via WhatsApp" data-pl="Napisz do Punktu na WhatsApp">Ask Print Desk via WhatsApp</span>
+        </a>
+        <button onclick="document.querySelector('#print-guide').close()" class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-highest text-on-surface font-semibold text-xs border border-outline-variant lang-translatable" data-en="Close" data-pl="Zamknij">
+          Close
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest text-on-surface pt-12 pb-8 border-t border-outline-variant/60">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <!-- Student Perks Banner -->
+      <div class="p-5 rounded-2xl bg-surface-container border border-outline-variant mb-12 flex flex-col md:flex-row items-center justify-between gap-5 shadow-sm" data-reveal="fade-up">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 border border-primary/30">
+            <span class="material-symbols-outlined text-2xl text-primary">school</span>
+          </div>
+          <div>
+            <div class="font-headline text-lg font-bold text-on-surface lang-translatable" data-en="Uniwersytet ÅšlÄ…ski Student &amp; Academic Perks" data-pl="Program dla StudentÃ³w Uniwersytetu ÅšlÄ…skiego">Uniwersytet ÅšlÄ…ski Student &amp; Academic Perks</div>
+            <div class="font-body text-xs text-on-surface-variant mt-0.5 lang-translatable" data-en="Show your student ID at the register for special academic bundles on authentic kaapi and bulk printing packages." data-pl="PokaÅ¼ waÅ¼nÄ… legitymacjÄ™ studenckÄ… przy kasie, by skorzystaÄ‡ z pakietÃ³w studenckich na kawÄ™ i oprawÄ™ prac dyplomowych.">Show your student ID at the register for special academic bundles on authentic kaapi and bulk printing packages.</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <span class="px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container text-xs font-bold uppercase tracking-wider border border-primary/30 lang-translatable" data-en="Student ID Validated" data-pl="WaÅ¼na Legitymacja">Student ID Validated</span>
+        </div>
+      </div>
+
+      <!-- Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img alt="El Shaddai Logo" class="h-9 w-auto object-contain rounded-full bg-surface-container p-0.5 border border-outline-variant/50" src="./assets/logo-96.webp"/>
+            <span class="font-headline text-xl text-on-surface font-bold">El Shaddai</span>
+          </div>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed lang-translatable" data-en="A warm sanctuary in Katowice where authentic South Indian decoction coffee, artisanal teas, and swift document printing meet academic ambition." data-pl="CiepÅ‚y azyl w Katowicach, gdzie tradycyjna poÅ‚udniowoindyjska kawa filtrowana, aromatyczny chai i sprawny punkt ksero spotykajÄ… siÄ™ z uniwersyteckÄ… ambicjÄ….">
+            A warm sanctuary in Katowice where authentic South Indian decoction coffee, artisanal teas, and swift document printing meet academic ambition.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <a class="w-8 h-8 rounded-lg bg-surface-container hover:bg-primary hover:text-surface-container-lowest text-on-surface flex items-center justify-center transition-colors border border-outline-variant" href="https://www.facebook.com/profile.php/?id=61593598552039" rel="noopener noreferrer" target="_blank" title="Facebook Profile">
+              <span class="material-symbols-outlined text-[16px]">public</span>
+            </a>
+            <a class="w-8 h-8 rounded-lg bg-surface-container hover:bg-primary hover:text-surface-container-lowest text-on-surface flex items-center justify-center transition-colors border border-outline-variant" href="https://www.youtube.com/@ElShaddaiCafePunktKsero" rel="noopener noreferrer" target="_blank" title="YouTube Channel">
+              <span class="material-symbols-outlined text-[16px]">smart_display</span>
+            </a>
+            <a class="w-8 h-8 rounded-lg bg-surface-container hover:bg-primary hover:text-surface-container-lowest text-on-surface flex items-center justify-center transition-colors border border-outline-variant" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jagiello%C5%84ska+22%2C+Katowice" rel="noopener noreferrer" target="_blank" title="Google Maps">
+              <span class="material-symbols-outlined text-[16px]">location_on</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-headline text-lg text-on-surface font-bold lang-translatable" data-en="Contact &amp; Ordering" data-pl="Kontakt &amp; ZamÃ³wienia">Contact &amp; Ordering</div>
+          <ul class="space-y-2 font-body text-xs text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="tel:+48507700193"><span class="material-symbols-outlined text-primary text-[16px]">phone</span>+48 507 700 193 (<span class="lang-translatable" data-en="Calls" data-pl="Telefon">Calls</span>)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="https://wa.me/48516699313" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-primary text-[16px]">chat</span>+48 516 699 313 (WhatsApp)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="mailto:elshaddaipunks@gmail.com"><span class="material-symbols-outlined text-primary text-[16px]">mail</span>elshaddaipunks@gmail.com</a></li>
+            <li class="pt-1"><span class="text-on-surface font-semibold uppercase tracking-wider block mb-1 text-[11px] lang-translatable" data-en="Send files for printing:" data-pl="E-mail do wysyÅ‚ki druku:">Send files for printing:</span><code class="px-2 py-1 rounded bg-surface-container text-xs font-mono select-all text-primary border border-outline-variant">elshaddaipunks@gmail.com</code></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-headline text-lg text-on-surface font-bold lang-translatable" data-en="Studio Location" data-pl="Lokalizacja Lokalu">Studio Location</div>
+          <div class="font-body text-xs text-on-surface-variant space-y-1">
+            <p class="font-bold text-on-surface">ul. JagielloÅ„ska 22</p>
+            <p>40-035 Katowice, Poland</p>
+            <p class="text-xs text-outline font-mono mt-1">GPS: 50.2543453Â° N, 19.0225130Â° E</p>
+            <p class="text-xs text-primary font-medium pt-2 lang-translatable" data-en="Directly adjacent to student dorms &amp; academic faculties." data-pl="TuÅ¼ obok akademikÃ³w i wydziaÅ‚Ã³w Uniwersytetu ÅšlÄ…skiego.">Directly adjacent to student dorms &amp; academic faculties.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-headline text-lg text-on-surface font-bold lang-translatable" data-en="Katowice Service Hours" data-pl="Godziny Otwarcia">Katowice Service Hours</div>
+          <div class="space-y-2 font-body text-xs text-on-surface-variant">
+            <div class="flex justify-between items-center"><span class="text-on-surface lang-translatable" data-en="Monday â€“ Friday" data-pl="PoniedziaÅ‚ek â€“ PiÄ…tek">Monday â€“ Friday</span><span class="font-bold text-on-surface">07:30 â€“ 19:30</span></div>
+            <div class="flex justify-between items-center"><span class="text-on-surface lang-translatable" data-en="Saturday" data-pl="Sobota">Saturday</span><span class="font-bold text-on-surface">09:00 â€“ 18:00</span></div>
+            <div class="flex justify-between items-center"><span class="text-on-surface lang-translatable" data-en="Sunday" data-pl="Niedziela">Sunday</span><span class="font-bold text-primary">10:00 â€“ 17:00</span></div>
+            <div class="pt-2"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-bold text-[11px] border border-primary/30"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="lang-translatable" data-en="Ksero Desk Active" data-pl="Drukarnia Otwarta">Ksero Desk Active</span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Sub-bar -->
+      <div class="pt-6 mt-6 border-t border-outline-variant/60 flex flex-col md:flex-row items-center justify-between gap-3 text-on-surface-variant font-body text-xs">
+        <p class="lang-translatable" data-en="Â© 2026 El Shaddai Indian Cafe &amp; Punkt Ksero. All rights reserved. Katowice, ul. JagielloÅ„ska 22." data-pl="Â© 2026 El Shaddai Indyjska Kawiarnia &amp; Punkt Ksero. Wszelkie prawa zastrzeÅ¼one. Katowice, ul. JagielloÅ„ska 22.">Â© 2026 El Shaddai Indian Cafe &amp; Punkt Ksero. All rights reserved. Katowice, ul. JagielloÅ„ska 22.</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-primary transition-colors lang-translatable" data-en="Story" data-pl="O nas" href="#story-section">Story</a>
+          <a class="hover:text-primary transition-colors lang-translatable" data-en="Four Pillars" data-pl="Filary" href="#experience-section">Four Pillars</a>
+          <a class="hover:text-primary transition-colors lang-translatable" data-en="Artisanal Drinks" data-pl="Napoje" href="#menu-section">Artisanal Drinks</a>
+          <a class="hover:text-primary transition-colors lang-translatable" data-en="Print Desk" data-pl="Ksero" href="#ksero-section">Print Desk</a>
+          <a class="hover:text-primary transition-colors lang-translatable" data-en="Directions" data-pl="Dojazd" href="#location-section">Directions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CLIENT SCRIPTS (ANIMATION, I18N, WARSAW TIME, MOBILE MENU) -->
+  <script>
+    (function() {
+      'use strict';
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ========================================================================
+         1. SCROLL REVEAL OBSERVER
+         ======================================================================== */
+      function initScrollReveals() {
+        if (prefersReducedMotion) {
+          document.querySelectorAll('[data-reveal], [data-reveal-item]').forEach(el => {
+            el.classList.add('is-revealed', 'reveal-settled');
+          });
+          return;
+        }
+
+        document.querySelectorAll('[data-reveal-group="stagger"]').forEach(group => {
+          group.querySelectorAll('[data-reveal-item]').forEach((item, idx) => {
+            item.style.setProperty('--reveal-index', idx);
+          });
+        });
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const target = entry.target;
+              target.classList.add('is-revealed');
+              target.addEventListener('transitionend', () => {
+                target.classList.add('reveal-settled');
+              }, { once: true });
+              observer.unobserve(target);
+            }
+          });
+        }, {
+          rootMargin: '0px 0px -50px 0px',
+          threshold: 0.1
+        });
+
+        document.querySelectorAll('[data-reveal], [data-reveal-group="stagger"]').forEach(el => {
+          revealObserver.observe(el);
+        });
+      }
+
+      /* ========================================================================
+         2. THE BARISTA PILL (Scroll Past Hero Floating Dock)
+         ======================================================================== */
+      function initBaristaDock() {
+        const dock = document.getElementById('baristaDock');
+        const dismissBtn = document.getElementById('dockDismissBtn');
+        const triggerBtn = document.getElementById('dockTriggerBtn');
+        const hero = document.getElementById('hero');
+        
+        if (!dock) return;
+        let isDismissed = false;
+
+        const toggleDockVisibility = () => {
+          if (isDismissed) return;
+          const scrollY = window.scrollY || window.pageYOffset;
+          const threshold = hero ? Math.min(hero.offsetTop + hero.offsetHeight * 0.4, 450) : 380;
+
+          if (scrollY > threshold) {
+            dock.classList.add('is-dock-visible');
+            if (triggerBtn) triggerBtn.hidden = true;
+          } else {
+            dock.classList.remove('is-dock-visible');
+          }
+        };
+
+        window.addEventListener('scroll', toggleDockVisibility, { passive: true });
+        toggleDockVisibility();
+
+        if (dismissBtn) {
+          dismissBtn.addEventListener('click', () => {
+            isDismissed = true;
+            dock.classList.remove('is-dock-visible');
+            if (triggerBtn) triggerBtn.hidden = false;
+          });
+        }
+
+        if (triggerBtn) {
+          triggerBtn.addEventListener('click', () => {
+            isDismissed = false;
+            triggerBtn.hidden = true;
+            dock.classList.add('is-dock-visible');
+          });
+        }
+      }
+
+      /* ========================================================================
+         3. BILINGUAL SWITCHER (EN / PL) WITH BUTTERY CROSS-FADE
+         ======================================================================== */
+      function initLanguageSwitch() {
+        const wrap = document.getElementById('langSwitch');
+        if (!wrap) return;
+
+        const buttons = wrap.querySelectorAll('.lang-btn');
+        const translatableElements = document.querySelectorAll('.lang-translatable');
+
+        function applyLanguage(lang, smooth = true) {
+          wrap.setAttribute('data-active', lang);
+          document.documentElement.setAttribute('lang', lang);
+
+          buttons.forEach(btn => {
+            const isActive = btn.getAttribute('data-lang') === lang;
+            btn.classList.toggle('is-active', isActive);
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          });
+
+          if (!smooth || prefersReducedMotion) {
+            translatableElements.forEach(el => {
+              const val = el.getAttribute('data-' + lang);
+              if (val) el.innerHTML = val;
+            });
+            updateWarsawStatus(lang);
+            return;
+          }
+
+          translatableElements.forEach(el => el.classList.add('is-lang-fading'));
+
+          setTimeout(() => {
+            translatableElements.forEach(el => {
+              const val = el.getAttribute('data-' + lang);
+              if (val) el.innerHTML = val;
+              el.classList.remove('is-lang-fading');
+            });
+            updateWarsawStatus(lang);
+            const activeFilter = document.querySelector('.menu-filter-btn.is-active');
+            if (activeFilter) updateFilterPillPosition(activeFilter, false);
+          }, 120);
+
+          try {
+            localStorage.setItem('esh_lang', lang);
+          } catch(e) {}
+        }
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const selectedLang = btn.getAttribute('data-lang');
+            applyLanguage(selectedLang, true);
+          });
+        });
+
+        const urlParam = new URLSearchParams(window.location.search).get('lang');
+        const savedLang = urlParam || (function(){ try { return localStorage.getItem('esh_lang'); } catch(e){ return null; } })() || 'en';
+        if (savedLang === 'pl') {
+          applyLanguage('pl', false);
+        }
+      }
+
+      /* ========================================================================
+         4. EUROPE/WARSAW TIME STATUS ENGINE
+         ======================================================================== */
+      function updateWarsawStatus(lang) {
+        try {
+          const now = new Date();
+          const formatter = new Intl.DateTimeFormat('en-GB', {
+            timeZone: 'Europe/Warsaw',
+            weekday: 'short',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+            hourCycle: 'h23'
+          });
+          const parts = formatter.formatToParts(now);
+          let weekday = '', hour = 0, minute = 0;
+          for (const p of parts) {
+            if (p.type === 'weekday') weekday = p.value;
+            if (p.type === 'hour') hour = parseInt(p.value, 10);
+            if (p.type === 'minute') minute = parseInt(p.value, 10);
+          }
+          const currentMins = hour * 60 + minute;
+
+          let isOpen = false;
+          let closesAt = '';
+          let opensNext = '';
+
+          const isPl = (lang === 'pl');
+
+          if (['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(weekday)) {
+            if (currentMins >= 450 && currentMins < 1170) {
+              isOpen = true;
+              closesAt = '19:30';
+            } else if (currentMins < 450) {
+              opensNext = isPl ? 'dzisiaj o 07:30' : 'today at 07:30';
+            } else {
+              opensNext = (weekday === 'Fri') 
+                ? (isPl ? 'w sobotÄ™ o 09:00' : 'Saturday at 09:00') 
+                : (isPl ? 'jutro o 07:30' : 'tomorrow at 07:30');
+            }
+          } else if (weekday === 'Sat') {
+            if (currentMins >= 540 && currentMins < 1080) {
+              isOpen = true;
+              closesAt = '18:00';
+            } else if (currentMins < 540) {
+              opensNext = isPl ? 'dzisiaj o 09:00' : 'today at 09:00';
+            } else {
+              opensNext = isPl ? 'w niedzielÄ™ o 10:00' : 'Sunday at 10:00';
+            }
+          } else if (weekday === 'Sun') {
+            if (currentMins >= 600 && currentMins < 1020) {
+              isOpen = true;
+              closesAt = '17:00';
+            } else if (currentMins < 600) {
+              opensNext = isPl ? 'dzisiaj o 10:00' : 'today at 10:00';
+            } else {
+              opensNext = isPl ? 'w poniedziaÅ‚ek o 07:30' : 'Monday at 07:30';
+            }
+          }
+
+          const el = document.querySelector("#live-time-status");
+          if (el) {
+            if (isOpen) {
+              el.innerHTML = isPl 
+                ? `<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-bold text-emerald-400">OTWARTE</span><span class="text-outline-variant">/</span><span class="text-on-surface">Zamykamy o ${closesAt}</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">ul. JagielloÅ„ska 22</span>`
+                : `<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-bold text-emerald-400">OPEN NOW</span><span class="text-outline-variant">/</span><span class="text-on-surface">Closes ${closesAt}</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">ul. JagielloÅ„ska 22</span>`;
+            } else {
+              el.innerHTML = isPl
+                ? `<span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span><span class="font-bold text-amber-300">ZAMKNIÄ˜TE</span><span class="text-outline-variant">/</span><span class="text-on-surface">Otwarcie: ${opensNext}</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">ul. JagielloÅ„ska 22</span>`
+                : `<span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span><span class="font-bold text-amber-300">CLOSED NOW</span><span class="text-outline-variant">/</span><span class="text-on-surface">Opens ${opensNext}</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">ul. JagielloÅ„ska 22</span>`;
+            }
+          }
+        } catch (err) {
+          console.warn("Warsaw time error", err);
+        }
+      }
+
+      /* ========================================================================
+         5. MENU FILTERING & SLIDING PILL HIGHLIGHT
+         ======================================================================== */
+      function updateFilterPillPosition(activeBtn, smooth = true) {
+        const wrap = document.getElementById('menuFiltersWrap');
+        const pill = document.getElementById('filterSliderPill');
+        if (!wrap || !pill || !activeBtn) return;
+
+        const wrapRect = wrap.getBoundingClientRect();
+        const btnRect = activeBtn.getBoundingClientRect();
+        const leftOffset = btnRect.left - wrapRect.left;
+        const width = btnRect.width;
+
+        if (!smooth || prefersReducedMotion) {
+          pill.style.transition = 'none';
+        } else {
+          pill.style.transition = 'transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), width 0.32s cubic-bezier(0.16, 1, 0.3, 1)';
+        }
+
+        pill.style.transform = `translateX(${leftOffset}px)`;
+        pill.style.width = `${width}px`;
+      }
+
+      window.filterMenu = function(category, event) {
+        const allCategories = document.querySelectorAll('.menu-cat');
+        allCategories.forEach(cat => {
+          if (category === 'all' || cat.getAttribute('data-category') === category) {
+            cat.style.display = 'block';
+            const grid = cat.querySelector('[data-reveal-group="stagger"]');
+            if (grid) grid.classList.add('is-revealed');
+          } else {
+            cat.style.display = 'none';
+          }
+        });
+
+        const buttons = document.querySelectorAll('.menu-filter-btn');
+        let selectedBtn = null;
+        buttons.forEach(btn => {
+          const isTarget = (event && btn === event.currentTarget) || (btn.getAttribute('data-category') === category);
+          btn.classList.toggle('is-active', isTarget);
+          btn.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+          if (isTarget) selectedBtn = btn;
+        });
+
+        if (selectedBtn) {
+          updateFilterPillPosition(selectedBtn, true);
+        }
+      };
+
+      /* ========================================================================
+         6. MOBILE DRAWER NAVIGATION (Preserving user console.log("menu"))
+         ======================================================================== */
+      const navToggle = document.querySelector("#nav-toggle");
+      const navigation = document.querySelector("#navigation");
+      const navToggleIcon = document.querySelector("#nav-toggle-icon");
+
+      function toggleNav() {
+        const isHidden = navigation.classList.contains("hidden");
+        if (isHidden) {
+          navigation.classList.remove("hidden");
+          navToggle.setAttribute("aria-expanded", "true");
+          navToggle.setAttribute("aria-label", "Close navigation");
+          if (navToggleIcon) navToggleIcon.textContent = "close";
+        } else {
+          navigation.classList.add("hidden");
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.setAttribute("aria-label", "Open navigation");
+          if (navToggleIcon) navToggleIcon.textContent = "menu";
+        }
+        console.log("menu");
+      }
+
+      function closeNav() {
+        if (navigation && !navigation.classList.contains("hidden")) {
+          navigation.classList.add("hidden");
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.setAttribute("aria-label", "Open navigation");
+          if (navToggleIcon) navToggleIcon.textContent = "menu";
+        }
+      }
+
+      if (navToggle) {
+        navToggle.addEventListener("click", toggleNav);
+      }
+
+      document.querySelectorAll(".mobile-nav-link").forEach(a => {
+        a.addEventListener("click", closeNav);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeNav();
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1280) closeNav();
+        const activeFilter = document.querySelector('.menu-filter-btn.is-active');
+        if (activeFilter) updateFilterPillPosition(activeFilter, false);
+      });
+
+      /* ========================================================================
+         7. UTILITIES: COPY EMAIL & PRINT GUIDE DIALOG
+         ======================================================================== */
+      window.copyEmail = function() {
+        navigator.clipboard.writeText('elshaddaipunks@gmail.com').then(() => {
+          const btn = document.querySelector("#copy-email-btn");
+          if (btn) {
+            const original = btn.textContent;
+            btn.textContent = (document.documentElement.lang === 'pl') ? "Skopiowano!" : "Copied!";
+            btn.classList.add("bg-primary", "text-surface-container-lowest");
+            setTimeout(() => {
+              btn.textContent = original;
+              btn.classList.remove("bg-primary", "text-surface-container-lowest");
+            }, 2000);
+          }
+        });
+      };
+
+      const guideDialog = document.querySelector("#print-guide");
+      const guideOpen = document.querySelector("#guide-open");
+      const guideClose = document.querySelector("#guide-close");
+
+      if (guideOpen && guideDialog) {
+        guideOpen.addEventListener("click", () => guideDialog.showModal());
+      }
+      if (guideClose && guideDialog) {
+        guideClose.addEventListener("click", () => guideDialog.close());
+      }
+      if (guideDialog) {
+        guideDialog.addEventListener("click", (e) => {
+          const rect = guideDialog.getBoundingClientRect();
+          if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+            guideDialog.close();
+          }
+        });
+      }
+
+      function initMenuFilters() {
+        const activeBtn = document.querySelector('.menu-filter-btn.is-active');
+        if (activeBtn) {
+          updateFilterPillPosition(activeBtn, false);
+          setTimeout(() => updateFilterPillPosition(activeBtn, false), 120);
+        }
+      }
+
+      /* ========================================================================
+         8. MAGNETIC BUTTON & HERO HOTSPOT DOCK ENGINE
+         ======================================================================== */
+      function initMagneticButton() {
+        const btn = document.getElementById('heroMagneticBtn');
+        if (!btn || prefersReducedMotion) return;
+
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          btn.style.transform = `translate(${x * 0.28}px, ${y * 0.28}px) scale(1.02)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translate(0px, 0px) scale(1)';
+        });
+      }
+
+      function initHeroHotspots() {
+        const dock = document.getElementById('heroHotspotDock');
+        const video = document.getElementById('heroVideoBg');
+        if (!dock || !video) return;
+
+        const defaultSrc = './assets/hero-bg.mp4';
+        let currentActiveSrc = defaultSrc;
+        let revertTimeout = null;
+
+        const items = dock.querySelectorAll('.hotspot-item');
+
+        function switchMedia(newSrc) {
+          if (currentActiveSrc === newSrc) return;
+          currentActiveSrc = newSrc;
+
+          video.style.transition = 'opacity 350ms ease';
+          video.style.opacity = '0.08';
+
+          setTimeout(() => {
+            if (newSrc.endsWith('.mp4')) {
+              video.src = newSrc;
+              video.load();
+              video.play().catch(() => {});
+            }
+            video.style.opacity = '0.42';
+          }, 200);
+        }
+
+        items.forEach(item => {
+          item.addEventListener('mouseenter', () => {
+            if (revertTimeout) clearTimeout(revertTimeout);
+            items.forEach(i => i.classList.remove('is-active'));
+            item.classList.add('is-active');
+
+            const videoSrc = item.getAttribute('data-video');
+            if (videoSrc) {
+              switchMedia(videoSrc);
+            }
+          });
+        });
+
+        dock.addEventListener('mouseleave', () => {
+          revertTimeout = setTimeout(() => {
+            items.forEach(i => i.classList.remove('is-active'));
+            switchMedia(defaultSrc);
+          }, 300);
+        });
+      }
+
+      // Initialize all on ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          initScrollReveals();
+          initBaristaDock();
+          initLanguageSwitch();
+          initMenuFilters();
+          initMagneticButton();
+          initHeroHotspots();
+          updateWarsawStatus('en');
+        });
+      } else {
+        initScrollReveals();
+        initBaristaDock();
+        initLanguageSwitch();
+        initMenuFilters();
+        initMagneticButton();
+        initHeroHotspots();
+        updateWarsawStatus('en');
+      }
+    })();
+  </script>
+</body>
+</html>
