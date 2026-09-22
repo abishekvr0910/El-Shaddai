@@ -263,34 +263,27 @@ import './main.css';
           const isPl = (lang === 'pl');
 
           if (['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(weekday)) {
-            if (currentMins >= 450 && currentMins < 1170) {
+            if (currentMins >= 510 && currentMins < 1140) {
               isOpen = true;
-              closesAt = '19:30';
-            } else if (currentMins < 450) {
-              opensNext = isPl ? 'dzisiaj o 07:30' : 'today at 07:30';
+              closesAt = '19:00';
+            } else if (currentMins < 510) {
+              opensNext = isPl ? 'dzisiaj o 08:30' : 'today at 08:30';
             } else {
               opensNext = (weekday === 'Fri')
-                ? (isPl ? 'w sobotę o 09:00' : 'Saturday at 09:00')
-                : (isPl ? 'jutro o 07:30' : 'tomorrow at 07:30');
+                ? (isPl ? 'w sobotę o 10:00' : 'Saturday at 10:00')
+                : (isPl ? 'jutro o 08:30' : 'tomorrow at 08:30');
             }
           } else if (weekday === 'Sat') {
-            if (currentMins >= 540 && currentMins < 1080) {
-              isOpen = true;
-              closesAt = '18:00';
-            } else if (currentMins < 540) {
-              opensNext = isPl ? 'dzisiaj o 09:00' : 'today at 09:00';
-            } else {
-              opensNext = isPl ? 'w niedzielę o 10:00' : 'Sunday at 10:00';
-            }
-          } else if (weekday === 'Sun') {
             if (currentMins >= 600 && currentMins < 1020) {
               isOpen = true;
               closesAt = '17:00';
             } else if (currentMins < 600) {
               opensNext = isPl ? 'dzisiaj o 10:00' : 'today at 10:00';
             } else {
-              opensNext = isPl ? 'w poniedziałek o 07:30' : 'Monday at 07:30';
+              opensNext = isPl ? 'w poniedziałek o 08:30' : 'Monday at 08:30';
             }
+          } else if (weekday === 'Sun') {
+            opensNext = isPl ? 'w poniedziałek o 08:30' : 'Monday at 08:30';
           }
 
           const el = document.querySelector("#live-time-status");
@@ -303,6 +296,26 @@ import './main.css';
               el.innerHTML = isPl
                 ? `<span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span><span class="font-bold text-amber-300">ZAMKNIĘTE</span><span class="text-outline-variant">/</span><span class="text-on-surface">Otwarcie: ${opensNext}</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">ul. Jagiellońska 22</span>`
                 : `<span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span><span class="font-bold text-amber-300">CLOSED NOW</span><span class="text-outline-variant">/</span><span class="text-on-surface">Opens ${opensNext}</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">ul. Jagiellońska 22</span>`;
+            }
+          }
+
+          /* Footer ksero badge follows the same live status */
+          const badge = document.getElementById('kseroStatusBadge');
+          if (badge) {
+            const dot = document.getElementById('kseroStatusDot');
+            const txt = document.getElementById('kseroStatusText');
+            if (isOpen) {
+              badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-bold text-[11px] border border-primary/30';
+              dot.className = 'w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
+              txt.setAttribute('data-en', 'Ksero Desk Active');
+              txt.setAttribute('data-pl', 'Punkt ksero otwarty');
+              if (!txt.classList.contains('lang-translatable')) txt.textContent = isPl ? 'Punkt ksero otwarty' : 'Ksero Desk Active';
+            } else {
+              badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-bold text-[11px] border border-outline-variant/40';
+              dot.className = 'w-2 h-2 rounded-full bg-amber-600';
+              txt.setAttribute('data-en', 'Ksero Desk Closed');
+              txt.setAttribute('data-pl', 'Punkt ksero zamknięty');
+              if (!txt.classList.contains('lang-translatable')) txt.textContent = isPl ? 'Punkt ksero zamknięty' : 'Ksero Desk Closed';
             }
           }
         } catch (err) {
