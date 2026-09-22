@@ -31,14 +31,15 @@
   <meta name="theme-color" content="#1f120c" media="(prefers-color-scheme: dark)"/>
   
   <!-- hreflang for EN/PL -->
+  <link rel="canonical" href="https://all-brown-website.vercel.app/"/>
   <link rel="alternate" hreflang="en" href="https://all-brown-website.vercel.app/"/>
   <link rel="alternate" hreflang="pl" href="https://all-brown-website.vercel.app/"/>
   <link rel="alternate" hreflang="x-default" href="https://all-brown-website.vercel.app/"/>
   <link rel="preload" href="./manifest.json" as="fetch" crossorigin/>
 
   <!-- Self-hosted typography and icon font -->
-  <link rel="preload" href="./fonts/Manrope-400.ttf" as="font" type="font/ttf" crossorigin/>
-  <link rel="preload" href="./fonts/CormorantGaramond-700.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="preload" href="./fonts/Manrope-400.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="./fonts/CormorantGaramond-700.woff2" as="font" type="font/woff2" crossorigin/>
 
   <!-- JSON-LD LocalBusiness Structured Data -->
   <script type="application/ld+json">
@@ -92,35 +93,35 @@
   <style>
     @font-face {
       font-family: "Manrope";
-      src: url("./fonts/Manrope-400.ttf") format("truetype");
+      src: url("./fonts/Manrope-400.woff2") format("woff2");
       font-weight: 400;
       font-style: normal;
       font-display: swap;
     }
     @font-face {
       font-family: "Manrope";
-      src: url("./fonts/Manrope-600.ttf") format("truetype");
+      src: url("./fonts/Manrope-600.woff2") format("woff2");
       font-weight: 600;
       font-style: normal;
       font-display: swap;
     }
     @font-face {
       font-family: "Manrope";
-      src: url("./fonts/Manrope-700.ttf") format("truetype");
+      src: url("./fonts/Manrope-700.woff2") format("woff2");
       font-weight: 700;
       font-style: normal;
       font-display: swap;
     }
     @font-face {
       font-family: "Cormorant Garamond";
-      src: url("./fonts/CormorantGaramond-600.ttf") format("truetype");
+      src: url("./fonts/CormorantGaramond-600.woff2") format("woff2");
       font-weight: 600;
       font-style: normal;
       font-display: swap;
     }
     @font-face {
       font-family: "Cormorant Garamond";
-      src: url("./fonts/CormorantGaramond-700.ttf") format("truetype");
+      src: url("./fonts/CormorantGaramond-700.woff2") format("woff2");
       font-weight: 700;
       font-style: normal;
       font-display: swap;
@@ -1267,7 +1268,7 @@
           </div>
 
           <figure class="hero-photo" data-reveal="scale-up">
-            <img src="./assets/cafe-community-hero.jpg" alt="Interior of El Shaddai with a round table, chairs and the brick-fronted counter" data-en-alt="Interior of El Shaddai with a round table, chairs and the brick-fronted counter" data-pl-alt="Wnętrze El Shaddai z okrągłym stołem, krzesłami i ladą wykończoną cegłą" width="1430" height="1074" fetchpriority="high"/>
+            <picture><source type="image/webp" srcset="./assets/cafe-community-hero-800.webp 800w, ./assets/cafe-community-hero.webp 1448w" sizes="100vw"/><img src="./assets/cafe-community-hero.jpg" alt="Interior of El Shaddai with a round table, chairs and the brick-fronted counter" data-en-alt="Interior of El Shaddai with a round table, chairs and the brick-fronted counter" data-pl-alt="Wnętrze El Shaddai z okrągłym stołem, krzesłami i ladą wykończoną cegłą" width="1430" height="1074" fetchpriority="high"/></picture>
             <figcaption>
               <span class="lang-translatable" data-en="A real place to pause between classes" data-pl="Prawdziwe miejsce na chwilę między zajęciami">A real place to pause between classes</span>
               <span>ul. Jagiellońska 22</span>
@@ -1401,7 +1402,7 @@
                   <span class="font-body text-on-surface-variant text-[11px] font-semibold lang-translatable" data-en="Walk to Rectorate" data-pl="Pieszo od rektoratu">Walk to Rectorate</span>
                 </div>
                 <div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/70 shadow-sm text-center">
-                  <span class="block font-headline text-2xl text-primary font-bold lang-translatable" data-en="Formats" data-pl="Formaty">Formats</span>
+                  <span class="block font-headline text-2xl text-primary font-bold">A4 · A3</span>
                   <span class="font-body text-on-surface-variant text-[11px] font-semibold lang-translatable" data-en="Print Desk" data-pl="Punkt ksero">Print Desk</span>
                 </div>
               </div>
@@ -2080,7 +2081,7 @@
                     <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
                     <span class="font-headline text-base font-bold text-on-surface">ul. Jagiellońska 22, Katowice</span>
                   </div>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5">GPS: 50.2543453° N, 19.0225130° E • 40-035 Katowice, Poland</p>
+                  <p class="font-body text-xs text-[#c49d86] mt-0.5">GPS: 50.2543453° N, 19.0225130° E • 40-035 Katowice, Poland</p>
                 </div>
                 <a class="px-4 py-2 rounded-lg bg-primary hover:bg-secondary text-surface-container-lowest font-bold text-xs shadow-md transition-colors flex items-center gap-1.5 shrink-0" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jagiello%C5%84ska+22%2C+Katowice" onclick="trackEvent('click_directions', { location: 'header' })" rel="noopener noreferrer" target="_blank">
                   <span class="material-symbols-outlined text-[16px]">navigation</span>
@@ -2453,7 +2454,7 @@
           <div class="font-body text-xs text-on-surface-variant space-y-1">
             <p class="font-bold text-on-surface">ul. Jagiellońska 22</p>
             <p>40-035 Katowice, Poland</p>
-            <p class="text-xs text-outline font-mono mt-1">GPS: 50.2543453° N, 19.0225130° E</p>
+            <p class="text-xs text-[#c49d86] font-mono mt-1">GPS: 50.2543453° N, 19.0225130° E</p>
             <p class="text-xs text-primary font-medium pt-2 lang-translatable" data-en="Directly adjacent to student dorms &amp; academic faculties." data-pl="Tuż obok akademików i wydziałów Uniwersytetu Śląskiego.">Directly adjacent to student dorms &amp; academic faculties.</p>
           </div>
         </div>
@@ -3029,12 +3030,20 @@
 </script>
 
   <!-- GA4 Placeholder & Analytics Tracking Helper -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- To activate: set GA4_MEASUREMENT_ID below to your GA4 Measurement ID (e.g. 'G-AB12CD34EF').
+       Until then no analytics requests are sent. -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    var GA4_MEASUREMENT_ID = ''; // e.g. 'G-AB12CD34EF'
+    if (GA4_MEASUREMENT_ID && /^G-[A-Z0-9]{6,}$/.test(GA4_MEASUREMENT_ID)) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GA4_MEASUREMENT_ID);
+    }
 
     window.trackEvent = function(eventName, params = {}) {
       if (window.va) window.va('event', eventName, params);
