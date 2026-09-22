@@ -10,6 +10,41 @@ import './main.css';
       /* ========================================================================
          1. SCROLL REVEAL OBSERVER
          ======================================================================== */
+      /* ========================================================================
+         1b. FRAMER-STYLE WORD REVEAL
+         Splits [data-words] headings into word spans at reveal time.
+         Language switches replace innerHTML with plain text afterwards,
+         which gracefully ends the effect (no re-split needed).
+         ======================================================================== */
+      function splitWords(el) {
+        if (el.dataset.wordsSplit === 'done') return;
+        const walk = (node) => {
+          [...node.childNodes].forEach(child => {
+            if (child.nodeType === 3) {
+              const frag = document.createDocumentFragment();
+              const words = child.textContent.split(/(\s+)/);
+              let wi = 0;
+              words.forEach(part => {
+                if (!part) return;
+                if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); }
+                else {
+                  const span = document.createElement('span');
+                  span.className = 'w';
+                  span.style.setProperty('--wi', wi++);
+                  span.textContent = part;
+                  frag.appendChild(span);
+                }
+              });
+              node.replaceChild(frag, child);
+            } else if (child.nodeType === 1 && !child.classList.contains('w')) {
+              walk(child);
+            }
+          });
+        };
+        walk(el);
+        el.dataset.wordsSplit = 'done';
+      }
+
       function initScrollReveals() {
         if (prefersReducedMotion) {
           document.querySelectorAll('[data-reveal], [data-reveal-item]').forEach(el => {
@@ -43,6 +78,21 @@ import './main.css';
         document.querySelectorAll('[data-reveal], [data-reveal-group="stagger"]').forEach(el => {
           revealObserver.observe(el);
         });
+
+        /* Framer-style word reveal targets */
+        const wordEls = document.querySelectorAll('[data-words]');
+        if (wordEls.length) {
+          const wordObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                splitWords(entry.target);
+                entry.target.classList.add('is-revealed');
+                obs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.35, rootMargin: '0px 0px -5% 0px' });
+          wordEls.forEach(el => wordObserver.observe(el));
+        }
       }
 
       /* ========================================================================
