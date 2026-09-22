@@ -1,0 +1,9 @@
+# El Shaddai Indian Cafe & Punkt Ksero - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://all-brown-website.vercel.app/sitemap.xml
+
+# Host
+Host: https://all-brown-website.vercel.app
