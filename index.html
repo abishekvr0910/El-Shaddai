@@ -965,8 +965,8 @@
         "position": 1,
         "item": {
           "@type": "MenuItem",
-          "name": "Madras Filter Kaapi",
-          "description": "Authentic South Indian filter coffee."
+          "name": "Filter Coffee",
+          "description": "Traditional South Indian coffee with dark roasted beans and chicory, served with milk."
         }
       },
       {
@@ -1417,9 +1417,9 @@
             <!-- Filter Badges with Sliding Highlight Pill -->
             <div class="menu-filters-wrap" id="menuFiltersWrap" role="tablist" aria-label="Menu filters" data-en-label="Menu filters" data-pl-label="Kategorie menu">
               <span class="filter-slider-pill" id="filterSliderPill" aria-hidden="true"></span>
-              <button class="menu-filter-btn is-active lang-translatable" data-category="all" data-en="All Drinks (7)" data-pl="Wszystkie (7)" role="tab" aria-selected="true" onclick="filterMenu('all', event)">All Drinks (7)</button>
-              <button class="menu-filter-btn lang-translatable" data-category="coffee" data-en="Filter Kaapi (4)" data-pl="Kaapi filtrowane (4)" role="tab" aria-selected="false" onclick="filterMenu('coffee', event)">Filter Kaapi (4)</button>
-              <button class="menu-filter-btn lang-translatable" data-category="chai" data-en="Regional Chai (3)" data-pl="Regionalne chai (3)" role="tab" aria-selected="false" onclick="filterMenu('chai', event)">Regional Chai (3)</button>
+              <button class="menu-filter-btn is-active lang-translatable" data-category="all" data-en="All Drinks (12)" data-pl="Wszystkie (12)" role="tab" aria-selected="true" onclick="filterMenu('all', event)">All Drinks (12)</button>
+              <button class="menu-filter-btn lang-translatable" data-category="coffee" data-en="Filter Coffee (6)" data-pl="Kawy filtrowane (6)" role="tab" aria-selected="false" onclick="filterMenu('coffee', event)">Filter Coffee (6)</button>
+              <button class="menu-filter-btn lang-translatable" data-category="chai" data-en="Tea & Chai (6)" data-pl="Herbaty i chai (6)" role="tab" aria-selected="false" onclick="filterMenu('chai', event)">Tea & Chai (6)</button>
             </div>
           </div>
 
@@ -1432,24 +1432,25 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5" data-reveal-group="stagger">
-              <!-- Item 1: Traditional Madras Kaapi -->
+
               <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
                 <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
-                  <img src="./assets/drink-kaapi-1.webp" alt="Traditional Madras Kaapi" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <img src="./assets/drink-kaapi-1.webp" alt="Filter Coffee" class="card-media-img w-full h-full object-cover" loading="lazy"/>
                   <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Brass Dabarah" data-pl="Mosiężny zestaw dabarah">Brass Dabarah</span>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="House Classic" data-pl="Klasyka lokalu">House Classic</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-between">
                   <div>
                     <div class="flex items-baseline justify-between gap-2 mb-1.5">
-                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Traditional Madras Kaapi</h4>
-                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="House Signature" data-pl="Specjalność lokalu">House Signature</span>
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Filter Coffee</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">10 / 12 zł</span>
                     </div>
-                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Frothy, rich dark roast with traditional chicory blend. Poured and aerated in an authentic brass dabarah &amp; tumbler." data-pl="Intensywna, ciemno palona kawa z dodatkiem cykorii. Przelewana z wysokości i napowietrzana w tradycyjnym mosiężnym zestawie dabarah.">Frothy, rich dark roast with traditional chicory blend. Poured and aerated in an authentic brass dabarah &amp; tumbler.</p>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Traditional South Indian coffee made with dark roasted coffee beans and chicory, served with milk." data-pl="Tradycyjna kawa południowoindyjska z ciemno palonych ziaren kawy i cykorii, podawana z mlekiem.">Traditional South Indian coffee made with dark roasted coffee beans and chicory, served with milk.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Kawa Filtrowana</p>
                   </div>
                   <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
-                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Chikmagalur Roast" data-pl="Palona kawa z Chikmagalur">Chikmagalur Roast</span>
-                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Traditional%20Madras%20Kaapi." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Dark Roast & Chicory" data-pl="Ciemne palenie i cykoria">Dark Roast & Chicory</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Filter%20Coffee." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
                       <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
                       <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
                     </a>
@@ -1457,50 +1458,23 @@
                 </div>
               </div>
 
-
-
-              <!-- Item 4: Kumbakonam Degree Coffee -->
-              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
-                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
-                  <img src="./assets/drink-kaapi-4.webp" alt="Kumbakonam Degree Coffee" class="card-media-img w-full h-full object-cover" loading="lazy"/>
-                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Pure Decoction" data-pl="Czysty napar">Pure Decoction</span>
-                </div>
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
-                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Kumbakonam Degree Coffee</h4>
-                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Pure Decoction" data-pl="Czysty napar">Pure Decoction</span>
-                    </div>
-                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Centuries-old Tamil tradition using pure cow's milk froth and the first thick drip of Chicory-Peaberry coffee decoction." data-pl="Tamilska klasyka: pierwsza, najbardziej esencjonalna porcja naparu z kawy peaberry i cykorii, połączona ze spienionym mlekiem.">Centuries-old Tamil tradition using pure cow's milk froth and the first thick drip of Chicory-Peaberry coffee decoction.</p>
-                  </div>
-                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
-                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="First Drip Purity" data-pl="Pierwsza, najbardziej esencjonalna porcja">First Drip Purity</span>
-                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Kumbakonam%20Degree%20Coffee." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
-                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
-                      <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 5: Filter Coffee with Cardamom -->
               <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
                 <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
                   <img src="./assets/drink-kaapi-5.webp" alt="Filter Coffee with Cardamom" class="card-media-img w-full h-full object-cover" loading="lazy"/>
                   <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-on-surface-variant font-medium lang-translatable" data-en="Green Elaichi" data-pl="Zielony kardamon">Green Elaichi</span>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="With Spice" data-pl="Z przyprawą">With Spice</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-between">
                   <div>
                     <div class="flex items-baseline justify-between gap-2 mb-1.5">
                       <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Filter Coffee with Cardamom</h4>
-                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-medium lang-translatable" data-en="Spiced Infusion" data-pl="Aromat kardamonu">Spiced Infusion</span>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">10 / 12 zł</span>
                     </div>
-                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Traditional South Indian filter coffee elevated with freshly crushed green cardamom. Uplifting herbal spice meets dark roast." data-pl="Tradycyjna południowoindyjska kawa filtrowana ze świeżo rozgniecionym zielonym kardamonem. Ciemne palenie spotyka się z wyrazistym, ziołowym aromatem.">Traditional South Indian filter coffee elevated with freshly crushed green cardamom. Uplifting herbal spice meets dark roast.</p>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Traditional filter coffee infused with cardamom spice." data-pl="Tradycyjna kawa filtrowana z dodatkiem przyprawy kardamonu.">Traditional filter coffee infused with cardamom spice.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Kawa z Kardamonem</p>
                   </div>
                   <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
-                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Green Elaichi" data-pl="Zielony kardamon">Green Elaichi</span>
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Green Cardamom" data-pl="Zielony kardamon">Green Cardamom</span>
                     <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Filter%20Coffee%20with%20Cardamom." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
                       <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
                       <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
@@ -1509,24 +1483,99 @@
                 </div>
               </div>
 
-              <!-- Item 6: Filter Kaapi Black -->
               <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
                 <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
-                  <img src="./assets/drink-kaapi-6.webp" alt="Filter Kaapi Black" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <img src="./assets/drink-kaapi-3.webp" alt="Madurai Coffee" class="card-media-img w-full h-full object-cover" loading="lazy"/>
                   <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Zero Milk / Pure" data-pl="Bez mleka / Czysta kawa">Zero Milk / Pure</span>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Chennai Style" data-pl="Styl Chennai">Chennai Style</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-between">
                   <div>
                     <div class="flex items-baseline justify-between gap-2 mb-1.5">
-                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Filter Kaapi Black</h4>
-                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Unsweetened" data-pl="Bez cukru">Unsweetened</span>
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Madurai Coffee</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">10 / 12 zł</span>
                     </div>
-                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Pure straight gravity-drip filter decoction without milk. Intense, aromatic, and deeply restorative for purists." data-pl="Czysta kawa z metalowego filtra, bez mleka. Intensywna i aromatyczna, dla miłośników czarnej kawy.">Pure straight gravity-drip filter decoction without milk. Intense, aromatic, and deeply restorative for purists.</p>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Smooth, aromatic coffee typical of Chennai, lightly sweetened." data-pl="Gładka, aromatyczna kawa typowa dla Chennai, lekko słodzona.">Smooth, aromatic coffee typical of Chennai, lightly sweetened.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Kawa Madras</p>
                   </div>
                   <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
-                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Pure Decoction" data-pl="Czysty napar">Pure Decoction</span>
-                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Filter%20Kaapi%20Black." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Lightly Sweet" data-pl="Lekko słodzona">Lightly Sweet</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Madurai%20Coffee." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-4.webp" alt="Decoction Coffee" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Slow Brewed" data-pl="Parzona powoli">Slow Brewed</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Decoction Coffee</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">10 / 12 zł</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Strong coffee decoction from Tamil Nadu, brewed slowly for rich flavor." data-pl="Mocny wywar kawowy z Tamil Nadu, parzony powoli dla bogatego smaku.">Strong coffee decoction from Tamil Nadu, brewed slowly for rich flavor.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Kawa Dekokcyjna</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Tamil Nadu" data-pl="Z Tamil Nadu">Tamil Nadu</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Decoction%20Coffee." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-2.webp" alt="Narasu's Coffee Filter Coffee" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="80/20 Blend" data-pl="Mieszanka 80/20">80/20 Blend</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Narasu's Coffee Filter Coffee</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">10 / 12 zł</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Traditional South Indian filter blend (80% coffee + 20% chicory) from Tamil Nadu." data-pl="Tradycyjna południowoindyjska kawa filtrowana (80% kawy + 20% cykorii) z Tamil Nadu.">Traditional South Indian filter blend (80% coffee + 20% chicory) from Tamil Nadu.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Kawa filtrowana Narasu's</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Coffee + Chicory" data-pl="Kawa i cykoria">Coffee + Chicory</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Narasu%27s%20Coffee%20Filter%20Coffee." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-kaapi-6.webp" alt="Kumbakonam Degree Coffee" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Full-Fat Milk" data-pl="Pełnotłuste mleko">Full-Fat Milk</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Kumbakonam Degree Coffee</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">10 / 12 zł</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Rich filter coffee from Kumbakonam region, uses pure full-fat milk for deep flavour." data-pl="Bogata kawa filtrowana z regionu Kumbakonam, przygotowywana z pełnotłustego mleka dla głębokiego smaku.">Rich filter coffee from Kumbakonam region, uses pure full-fat milk for deep flavour.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Kawa „Degree” z Kumbakonam</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Kumbakonam Region" data-pl="Region Kumbakonam">Kumbakonam Region</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Kumbakonam%20Degree%20Coffee." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
                       <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
                       <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
                     </a>
@@ -1559,24 +1608,25 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5" data-reveal-group="stagger">
-              <!-- Chai 1: House Masala Chai -->
+
               <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
                 <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
-                  <img src="./assets/drink-chai-1.webp" alt="House Masala Chai" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <img src="./assets/drink-chai-6.webp" alt="Herbal / Ayurvedic Indian Tea" class="card-media-img w-full h-full object-cover" loading="lazy"/>
                   <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Warming Spices" data-pl="Rozgrzewające przyprawy">Warming Spices</span>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Caffeine-Free" data-pl="Bez kofeiny">Caffeine-Free</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-between">
                   <div>
                     <div class="flex items-baseline justify-between gap-2 mb-1.5">
-                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">House Masala Chai</h4>
-                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Street Classic" data-pl="Indyjski klasyk">Street Classic</span>
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Herbal / Ayurvedic Indian Tea</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">12 zł</span>
                     </div>
-                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Steeped with hand-crushed fresh ginger, green cardamom pods, cloves, black pepper, and whole cinnamon bark." data-pl="Czarna herbata liściasta gotowana z mlekiem, świeżo tłuczonym imbirem, kardamonem, goździkami i cynamonem.">Steeped with hand-crushed fresh ginger, green cardamom pods, cloves, black pepper, and whole cinnamon bark.</p>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Tea blends with Indian herbs and spices (tulsi, ginger, licorice)." data-pl="Mieszanki herbat z indyjskimi ziołami i przyprawami (tulsi, imbir, lukrecja).">Tea blends with Indian herbs and spices (tulsi, ginger, licorice).</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Ziołowa</p>
                   </div>
                   <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
-                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Crushed Spices" data-pl="Świeżo rozgniecione przyprawy">Crushed Spices</span>
-                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20House%20Masala%20Chai." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Tulsi & Ginger" data-pl="Tulsi i imbir">Tulsi & Ginger</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Herbal%20/%20Ayurvedic%20Indian%20Tea." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
                       <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
                       <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
                     </a>
@@ -1584,24 +1634,48 @@
                 </div>
               </div>
 
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-1.webp" alt="Masala Chai" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Bestseller" data-pl="Bestseller">Bestseller</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Masala Chai</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">12 zł</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Spiced black tea with milk, ginger, cardamom, cloves, cinnamon." data-pl="Przyprawiana czarna herbata z mlekiem, imbirem, kardamonem, goździkami i cynamonem.">Spiced black tea with milk, ginger, cardamom, cloves, cinnamon.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Masala Chai</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Whole Spices" data-pl="Całe przyprawy">Whole Spices</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Masala%20Chai." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-              <!-- Chai 3: Kashmiri Kahwa -->
               <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
                 <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
                   <img src="./assets/drink-chai-3.webp" alt="Kashmiri Kahwa" class="card-media-img w-full h-full object-cover" loading="lazy"/>
                   <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-secondary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Saffron Green Tea" data-pl="Zielona herbata z szafranem">Zielona z Szafranem</span>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Green Tea" data-pl="Zielona herbata">Green Tea</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-between">
                   <div>
                     <div class="flex items-baseline justify-between gap-2 mb-1.5">
                       <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Kashmiri Kahwa</h4>
-                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-bold lang-translatable" data-en="Saffron Green Tea" data-pl="Zielona herbata z szafranem">Zielona z Szafranem</span>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">12 zł</span>
                     </div>
-                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Royal green tea from Kashmir steeped with pure saffron threads, cardamom, cinnamon, and sliced almonds." data-pl="Królewska zielona herbata z doliny Kaszmiru z nitkami szafranu, kardamonem, cynamonem i migdałami.">Royal green tea from Kashmir steeped with pure saffron threads, cardamom, cinnamon, and sliced almonds.</p>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Green tea with saffron, cardamom, cinnamon, almonds." data-pl="Zielona herbata z szafranem, kardamonem, cynamonem i migdałami.">Green tea with saffron, cardamom, cinnamon, almonds.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Kaszmirski Kahwa</p>
                   </div>
                   <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
-                    <span class="font-body text-xs text-secondary font-medium lang-translatable" data-en="Saffron &amp; Almonds" data-pl="Szafran i migdały">Saffron &amp; Almonds</span>
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Saffron & Almond" data-pl="Szafran i migdały">Saffron & Almond</span>
                     <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Kashmiri%20Kahwa." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
                       <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
                       <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
@@ -1610,26 +1684,74 @@
                 </div>
               </div>
 
-
-
-              <!-- Chai 6: Ayurvedic Herbal Infusion -->
               <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
                 <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
-                  <img src="./assets/drink-chai-6.webp" alt="Ayurvedic Herbal Infusion" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <img src="./assets/drink-chai-4.webp" alt="Noon Chai (&quot;Pink Tea&quot;)" class="card-media-img w-full h-full object-cover" loading="lazy"/>
                   <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Caffeine-Free" data-pl="Bez kofeiny">Caffeine-Free</span>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Kashmiri" data-pl="Kaszmirski">Kashmiri</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-between">
                   <div>
                     <div class="flex items-baseline justify-between gap-2 mb-1.5">
-                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ayurvedic Herbal Infusion</h4>
-                      <span class="text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold lang-translatable" data-en="Caffeine-Free" data-pl="Bez kofeiny">Bez Kofeiny</span>
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Noon Chai ("Pink Tea")</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">12 zł</span>
                     </div>
-                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Restorative herbal blend of sacred Tulsi (Holy Basil), warming ginger root, and naturally sweet licorice." data-pl="Ajurwedyjska mieszanka tulsi (świętej bazylii), rozgrzewającego imbiru i naturalnie słodkiego korzenia lukrecji.">Restorative herbal blend of sacred Tulsi (Holy Basil), warming ginger root, and naturally sweet licorice.</p>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Unique Kashmiri salted pink tea with milk & baking soda." data-pl="Unikalna kaszmirska solona różowa herbata z mlekiem i sodą oczyszczoną.">Unique Kashmiri salted pink tea with milk & baking soda.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Herbata różowa</p>
                   </div>
                   <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
-                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Tulsi &amp; Licorice" data-pl="Tulsi i lukrecja">Tulsi &amp; Licorice</span>
-                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Ayurvedic%20Herbal%20Infusion." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Salted Pink Tea" data-pl="Solona różowa herbata">Salted Pink Tea</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Noon%20Chai%20("Pink%20Tea")." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-2.webp" alt="Wayanad Chai" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Robust" data-pl="Mocna">Robust</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Wayanad Chai</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">12 zł</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Robust South-Indian black tea with cardamom & cloves." data-pl="Mocna południowoindyjska czarna herbata z kardamonem i goździkami.">Robust South-Indian black tea with cardamom & cloves.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Wayanad Chai</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Cardamom & Cloves" data-pl="Kardamon i goździki">Cardamom & Cloves</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Wayanad%20Chai." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
+                      <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
+                      <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="drink-card p-5 rounded-2xl bg-surface-container-high border border-outline-variant flex flex-col justify-between group overflow-hidden" data-reveal-item>
+                <div class="card-media-wrap h-36 w-full rounded-xl overflow-hidden mb-4 relative bg-surface-container-low border border-outline-variant/50 shrink-0">
+                  <img src="./assets/drink-chai-5.webp" alt="Nilgiri Tea" class="card-media-img w-full h-full object-cover" loading="lazy"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-black/30 pointer-events-none"></div>
+                  <span class="absolute top-2.5 right-2.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary border border-outline-variant/60 backdrop-blur-sm lang-translatable" data-en="Nilgiri Hills" data-pl="Wzgórza Nilgiri">Nilgiri Hills</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                      <h4 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Nilgiri Tea</h4>
+                      <span class="text-sm font-bold text-primary whitespace-nowrap">12 zł</span>
+                    </div>
+                    <p class="font-body text-xs text-on-surface-variant mb-4 leading-relaxed lang-translatable" data-en="Smooth, aromatic black tea from the Nilgiri hills." data-pl="Gładka, aromatyczna czarna herbata ze wzgórz Nilgiri.">Smooth, aromatic black tea from the Nilgiri hills.</p>
+                    <p class="font-body text-[11px] text-outline font-mono">Herbata Nilgiri</p>
+                  </div>
+                  <div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between mt-auto">
+                    <span class="font-body text-xs text-on-surface-variant font-medium lang-translatable" data-en="Black Tea" data-pl="Czarna herbata">Black Tea</span>
+                    <a href="https://wa.me/48516699313?text=Hi%20El%20Shaddai!%20I%20would%20like%20to%20order%20Nilgiri%20Tea." target="_blank" rel="noopener noreferrer" class="drink-order-link text-xs text-primary hover:text-secondary font-bold inline-flex items-center gap-1.5 transition-colors">
                       <span class="lang-translatable" data-en="Order on WhatsApp" data-pl="Zamów na WhatsApp">Order on WhatsApp</span>
                       <span class="arrow-move text-sm leading-none" aria-hidden="true">→</span>
                     </a>
@@ -1638,7 +1760,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
