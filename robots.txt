@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://all-brown-website.vercel.app/sitemap.xml
+Sitemap: https://www.elshaddaiindiancafe.pl/sitemap.xml
 
 # Host
-Host: https://all-brown-website.vercel.app
+Host: https://elshaddaiindiancafe.pl

@@ -94,6 +94,17 @@
       "destination": "/index.html"
     }
   ],
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "all-brown-website.vercel.app"
+        }
+      ],
+      "destination": "https://www.elshaddaiindiancafe.pl/$1",
+      "permanent": true
+    }
+  ]
 }
