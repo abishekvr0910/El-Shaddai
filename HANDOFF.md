@@ -5,6 +5,16 @@
 
 ---
 
+## 🌐 Custom domain (LIVE 2026-09-23)
+
+**https://www.elshaddaiindiancafe.pl** — the production URL.
+- Apex `elshaddaiindiancafe.pl` 308-redirects to `www.` (Vercel-managed)
+- Old `all-brown-website.vercel.app` 308-redirects to the new domain (see vercel.json redirects)
+- All absolute URLs (canonical, sitemap, robots, hreflang, OG) use `https://www.elshaddaiindiancafe.pl/`
+- DNS at GoDaddy (domaincontrol.com NS): A @ → 76.76.21.21, CNAME www → cname.vercel-dns.com
+- SSL auto-issued by Vercel. If the site ever shows a Vercel login page, someone re-enabled
+  Deployment Protection → set "Vercel Authentication" to Only Preview Deployments.
+
 ## 🚨 RULE ZERO — Where to deploy from
 
 | Folder | Role | Deploy? |
